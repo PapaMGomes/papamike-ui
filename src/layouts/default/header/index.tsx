@@ -42,6 +42,7 @@ const HeaderDefault: React.FC = () => {
                 {
                     name: 'Fundamental I',
                     child: [
+                        { name: 'Integral', action: () => {} },
                         { name: 'Objetivos Gerais', action: () => {} },
                         { name: 'Proposta Pedagógica', action: () => {} },
                         { name: 'Atividades Diferenciadas', action: () => {} }
@@ -63,7 +64,21 @@ const HeaderDefault: React.FC = () => {
                 }
             ]
         },
-        { name: 'Cursos', action: () => {} },
+        {
+            name: 'Cursos',
+            action: () => {},
+            child: [
+                { name: 'Técnico em Enfermagem', action: () => {} },
+                {
+                    name: 'Cursos Livres',
+                    action: () => {},
+                    child: [
+                        { name: 'Enfermagem', action: () => {} },
+                        { name: 'Estética', action: () => {} }
+                    ]
+                }
+            ]
+        },
         {
             name: 'Anhanguera',
             action: () => {},

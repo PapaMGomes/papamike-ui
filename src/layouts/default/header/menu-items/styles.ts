@@ -20,7 +20,7 @@ export const ItemsContainer = styled.ul`
 `
 
 export const Item = styled.li`
-    ${tw`mr-4 p-3 my-1 relative cursor-pointer rounded-md`}
+    ${tw`mr-4 p-3 my-1 relative cursor-pointer rounded-md uppercase`}
 
     &:hover {
         background: ${({ theme }) => darken(0.04, theme.colors.primary)};

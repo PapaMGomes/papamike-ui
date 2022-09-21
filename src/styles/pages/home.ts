@@ -7,11 +7,11 @@ export const Container = styled(AppContainer)`
     ${tw`h-screen flex flex-col justify-center items-center`}
 `
 
-export const Title = styled.h1.attrs(fadeIn.down)`
+export const Title = styled.h1`
     ${tw`text-lg`}
 `
 
-export const Image = styled.img.attrs(fadeIn.default)`
+export const Image = styled.img`
     ${tw`mt-8`}
 `
 
@@ -19,7 +19,7 @@ export const Content = styled.article`
     ${tw`mt-8`}
 `
 
-export const Button = styled(AppButton).attrs(fadeIn.up)`
+export const Button = styled(AppButton)`
     ${tw`min-w-[150px]`}
 
     &:first-of-type {

@@ -5,8 +5,8 @@ const common = {
         gray: '#919191',
         green: '#5EC278',
         yellow: '#FFD410',
-        primary: '#518DE0',
-        secondary: '#E94560'
+        primary: '#233F93',
+        secondary: '#FFF200'
     },
     spacing: {
         headerHeight: '5rem'

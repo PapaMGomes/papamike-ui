@@ -1,9 +1,10 @@
 import { AppContainer } from '@/styles/css/ts/components'
+import { fadeIn } from '@/styles/animation'
 import styled from 'styled-components'
 import { darken } from 'polished'
 import tw from 'twin.macro'
 
-export const Container = styled.section`
+export const Container = styled.section.attrs(fadeIn.right)`
     ${tw`pl-[4.5rem] md:hidden`}
     background: ${({ theme }) =>
         `linear-gradient(90deg, ${theme.colors.bgPrimary} 50%, ${theme.colors.primary} 50%);`};

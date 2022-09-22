@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FiChevronRight } from 'react-icons/fi'
+import autoAnimate from '@formkit/auto-animate'
 import { IMenuItem } from '@/interfaces/_menu-item.interface'
 import { Container, Title, Content, Text, Button } from './styles'
 
@@ -14,9 +15,14 @@ const AccordionMenu: React.FC<AccordionMenuProps> = props => {
         onOpenSubMenu,
         item: { name, child, action }
     } = props
+    const parent = useRef(null)
     const hasChild = !!child?.length
     const isShowSubMenu = hasChild && showSubMenu
     const [currentOpen, setCurrentOpen] = useState('')
+
+    useEffect(() => {
+        parent.current && autoAnimate(parent.current)
+    }, [parent])
 
     useEffect(() => {
         if (!showSubMenu) setCurrentOpen('')
@@ -36,7 +42,7 @@ const AccordionMenu: React.FC<AccordionMenuProps> = props => {
     }
 
     return (
-        <Container>
+        <Container ref={parent}>
             <Title>
                 <Text onClick={handleClick}>{name}</Text>
                 {hasChild && (

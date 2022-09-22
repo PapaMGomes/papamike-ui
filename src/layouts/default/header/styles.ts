@@ -5,6 +5,7 @@ import { fadeIn } from '@/styles/animation'
 
 export const HeaderContainer = styled.header`
     ${tw`fixed w-full`}
+    height: ${({ theme }) => theme.spacing.headerHeight};
     background: ${({ theme }) => theme.colors.bgSecondary};
 `
 
@@ -15,7 +16,7 @@ export const Container = styled(AppContainer)`
 export const ImageContainer = styled.figure``
 
 export const Image = styled.img.attrs(fadeIn.left)`
-    ${tw`w-32 sm:w-16 sm:h-12`}
+    ${tw`w-32 sm:w-20 sm:h-12`}
 `
 
 export const Content = styled.article.attrs(fadeIn.down)`

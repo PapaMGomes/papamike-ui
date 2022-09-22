@@ -1,19 +1,30 @@
-import React, { useEffect, useRef } from 'react'
-import { IoIosClose } from 'react-icons/io'
-import { Container, Button, Content, Link } from './styles'
+import React, { useEffect, useRef, useState } from 'react'
+import { FiX } from 'react-icons/fi'
+import AccordionMenu from './accordion-menu'
+import { BiLogInCircle } from 'react-icons/bi'
+import { Container, Nav, Button, Content } from './styles'
+import { IMenuItem } from '@/interfaces/_menu-item.interface'
 
 interface SideMenuDefaultProps {
-    items: any[]
     show: boolean
+    items: IMenuItem[]
     onClose: () => void
 }
 
 const SideMenuDefault: React.FC<SideMenuDefaultProps> = props => {
     const { items, show, onClose } = props
     const containerRef = useRef<HTMLElement>(null)
+    const [currentOpen, setCurrentOpen] = useState('')
 
     useEffect(() => {
+        window.onresize = () => {
+            handleClose()
+            setCurrentOpen('')
+        }
+    }, [])
+    useEffect(() => {
         if (show) setAnimationIn()
+        else setCurrentOpen('')
         document.body.style.overflow = show ? 'hidden' : 'auto'
     }, [show])
 
@@ -36,18 +47,35 @@ const SideMenuDefault: React.FC<SideMenuDefaultProps> = props => {
         }, 980)
     }
 
+    const onOpenSubMenu = ({ name }: IMenuItem) => {
+        if (name === currentOpen) setCurrentOpen('')
+        else setCurrentOpen(name)
+    }
+
+    const goToLogin = () =>
+        window.open('https://papamike.escolaweb.com.br/', '_blank')
+
     if (!show) return <></>
     return (
         <Container ref={containerRef}>
-            <Button onClick={handleClose}>
-                <IoIosClose />
-            </Button>
+            <Nav>
+                <Button className="close-button" onClick={handleClose}>
+                    <FiX />
+                </Button>
+                <Button onClick={goToLogin}>
+                    Meu Acesso
+                    <BiLogInCircle />
+                </Button>
+            </Nav>
 
             <Content>
                 {items.map((item, index) => (
-                    <Link key={index} onClick={item.action}>
-                        {item.name}
-                    </Link>
+                    <AccordionMenu
+                        item={item}
+                        key={index}
+                        onOpenSubMenu={onOpenSubMenu}
+                        showSubMenu={item.name === currentOpen}
+                    />
                 ))}
             </Content>
         </Container>

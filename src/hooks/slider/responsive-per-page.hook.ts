@@ -3,12 +3,12 @@ import { IResponsiveItemsPerPage } from '@/interfaces/_slider.interface'
 import useWindowDimensions from '@/hooks/window-dimentions.hook'
 import { useEffect, useState } from 'react'
 
-const useResponsivePerPage = (options: IResponsiveItemsPerPage) => {
+const useResponsivePerPage = (options?: IResponsiveItemsPerPage) => {
     const { width } = useWindowDimensions()
     const [result, setResult] = useState<number>()
 
     useEffect(() => {
-        if (!width) return
+        if (!options || !width) return
 
         const { sm, md, lg, xl } = WINDOW_BREAKPOINTS
 

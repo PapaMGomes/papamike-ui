@@ -31,6 +31,7 @@ export const SlideContainer: React.FC<SlideContainerProps> = ({ children }) => {
 const Carousel: React.FC<CarouselProps> = props => {
     const { options, children, padding } = props
     const [splideOptions, setSplideOptions] = useState<Options>({})
+    const perPage = useResponsivePerPage(options?.custom?.perPageResponsive)
 
     const _getCleanOption = () => {
         const clone = Object.assign({}, options)
@@ -49,13 +50,13 @@ const Carousel: React.FC<CarouselProps> = props => {
         setSplideOptions({ ...splideOptions, ...clone })
     }, [options])
 
-    if (options?.custom?.perPageResponsive) {
-        const perPage = useResponsivePerPage(options?.custom?.perPageResponsive)
+    useEffect(() => {
+        const isEmpty = !!!Object.keys(splideOptions).length
+        const enableCheck = !!options?.custom?.perPageResponsive
 
-        useEffect(() => {
-            setSplideOptions({ ...splideOptions, perPage })
-        }, [perPage])
-    }
+        if (isEmpty || !enableCheck) return
+        setSplideOptions({ ...splideOptions, perPage })
+    }, [perPage])
 
     return (
         <Container padding={padding}>

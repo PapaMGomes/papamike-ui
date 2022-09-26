@@ -4,7 +4,7 @@ import { AppButton, AppContainer } from '@/styles/css/ts/components'
 import { fadeIn } from '@/styles/animation'
 
 export const HeaderContainer = styled.header`
-    ${tw`fixed w-full`}
+    ${tw`fixed w-full z-20`}
     height: ${({ theme }) => theme.spacing.headerHeight};
     background: ${({ theme }) => theme.colors.bgSecondary};
 `

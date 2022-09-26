@@ -9,7 +9,8 @@ const common = {
         secondary: '#FFF200'
     },
     spacing: {
-        headerHeight: '5rem'
+        headerHeight: '6rem',
+        menuHeight: '3.5rem'
     }
 }
 

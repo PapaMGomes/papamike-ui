@@ -2,14 +2,16 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 
 interface AppContainerProps {
-    showHeader?: boolean
+    paddingTop?: boolean
 }
 
 export const AppContainer = styled.section<AppContainerProps>`
     ${tw`container mx-auto px-10`}
     padding-top: ${props => {
-        return props.showHeader
-            ? `calc(${props.theme.spacing.headerHeight} + 12px)`
+        return props.paddingTop
+            ? `calc(
+                ${props.theme.spacing.menuHeight} +
+                ${props.theme.spacing.headerHeight} )`
             : '1rem'
     }};
 

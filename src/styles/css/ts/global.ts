@@ -1,8 +1,10 @@
 import 'react-toastify/dist/ReactToastify.css'
+import '@splidejs/react-splide/css/sea-green'
+import 'animate.css'
 
 import { createGlobalStyle } from 'styled-components'
+import { darken, lighten } from 'polished'
 import tw from 'twin.macro'
-import 'animate.css'
 
 export default createGlobalStyle`
    :root {
@@ -40,4 +42,23 @@ export default createGlobalStyle`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.text}
   }
+
+  /* #region: SPLIPE */
+  .splide__arrow svg {
+    fill: ${({ theme }) => theme.colors.primary};
+
+    &:hover {
+        fill: ${({ theme }) => darken(0.1, theme.colors.primary)} !important;
+    }
+  }
+  .splide__pagination__page.is-active {
+    background: ${({ theme }) => theme.colors.primary} !important;
+  }
+  .splide__pagination__page:hover {
+    background: ${({ theme }) => lighten(0.3, theme.colors.primary)} !important;
+  }
+  .splide__pagination {
+    top: 100% !important;
+  }
+  /* #endregion: SPLIPE */
 `

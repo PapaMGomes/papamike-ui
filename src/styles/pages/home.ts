@@ -1,28 +1,13 @@
 import tw from 'twin.macro'
 import styled from 'styled-components'
-import { AppButton, AppContainer } from '../css/ts/components'
-import { fadeIn } from '../animation'
+import { AppContainer } from '../css/ts/components'
 
 export const Container = styled(AppContainer)`
-    ${tw`h-screen flex flex-col justify-center items-center`}
-`
-
-export const Title = styled.h1`
-    ${tw`text-lg`}
+    ${tw`h-screen`}
 `
 
 export const Image = styled.img`
-    ${tw`mt-8`}
+    ${tw`w-full h-[300px] object-cover rounded-3xl`}
 `
 
-export const Content = styled.article`
-    ${tw`mt-8`}
-`
-
-export const Button = styled(AppButton)`
-    ${tw`min-w-[150px]`}
-
-    &:first-of-type {
-        ${tw`mr-4`}
-    }
-`
+export const Content = styled.article``

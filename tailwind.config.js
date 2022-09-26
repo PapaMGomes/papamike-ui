@@ -11,11 +11,11 @@ const theme = {
         xl: '2.25rem'
     },
     screens: {
-        xs: { max: '475px' },
-        sm: { max: '640px' },
-        md: { max: '890px' },
-        lg: { max: '1024px' },
-        xl: { max: '1280px' }
+        xs: { max: `475px` },
+        sm: { max: `640px` },
+        md: { max: `890px` },
+        lg: { max: `1024px` },
+        xl: { max: `1280px` }
     }
 }
 

@@ -91,7 +91,7 @@ const HeaderDefault: React.FC = () => {
         window.open('https://papamike.escolaweb.com.br/', '_blank')
 
     return (
-        <HeaderContainer>
+        <HeaderContainer id="app-header">
             <Container>
                 <ImageContainer>
                     <Image src={Logo} alt="Papa Mike" />

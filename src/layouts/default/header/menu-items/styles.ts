@@ -6,8 +6,9 @@ import tw from 'twin.macro'
 
 export const Container = styled.section.attrs(fadeIn.right)`
     ${tw`pl-[4.5rem] md:hidden`}
+    height: ${({ theme }) => theme.spacing.menuHeight};
     background: ${({ theme }) =>
-        `linear-gradient(90deg, ${theme.colors.bgPrimary} 50%, ${theme.colors.primary} 50%);`};
+        `linear-gradient(90deg, trasnparent 50%, ${theme.colors.primary} 50%);`};
 `
 
 export const Nav = styled(AppContainer)`

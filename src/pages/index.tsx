@@ -6,6 +6,8 @@ import Carousel, {
     SlideContainer,
     OptionType
 } from '@/components/common/carousel'
+import AboutBanner from '@/components/about/about-banner'
+import EducationSystem from '@/components/about/education-system'
 
 const Home: React.FC = () => {
     const options: OptionType = {
@@ -32,7 +34,10 @@ const Home: React.FC = () => {
         <>
             <AppHead title="Home" />
 
-            <Container paddingTop>
+            <AboutBanner />
+            <EducationSystem />
+
+            {/* <Container paddingTop>
                 <Carousel padding="0" options={options}>
                     {data.map((item, index) => (
                         <SlideContainer key={index}>
@@ -42,7 +47,7 @@ const Home: React.FC = () => {
                         </SlideContainer>
                     ))}
                 </Carousel>
-            </Container>
+            </Container> */}
         </>
     )
 }

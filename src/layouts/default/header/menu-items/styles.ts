@@ -5,14 +5,14 @@ import { darken } from 'polished'
 import tw from 'twin.macro'
 
 export const Container = styled.section.attrs(fadeIn.right)`
-    ${tw`pl-[4.5rem] md:hidden`}
+    ${tw`pl-[4.5rem] md:hidden w-full`}
     height: ${({ theme }) => theme.spacing.menuHeight};
     background: ${({ theme }) =>
-        `linear-gradient(90deg, trasnparent 50%, ${theme.colors.primary} 50%);`};
+        `linear-gradient(90deg, transparent 50%, ${theme.colors.primary} 50%);`};
 `
 
 export const Nav = styled(AppContainer)`
-    ${tw`flex list-none py-0 pl-12 rounded-bl-3xl`}
+    ${tw`flex list-none py-0 pl-12 rounded-bl-3xl `}
     background: ${({ theme }) => theme.colors.primary};
 `
 
@@ -21,7 +21,7 @@ export const ItemsContainer = styled.ul`
 `
 
 export const Item = styled.li`
-    ${tw`mr-4 p-3 my-1 relative cursor-pointer rounded-md uppercase`}
+    ${tw`mr-4 p-3 my-1 relative cursor-pointer rounded-md uppercase font-bold`}
 
     &:hover {
         background: ${({ theme }) => darken(0.04, theme.colors.primary)};

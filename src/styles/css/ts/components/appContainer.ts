@@ -11,9 +11,19 @@ export const AppContainer = styled.section<AppContainerProps>`
         return props.paddingTop
             ? `calc(
                 ${props.theme.spacing.menuHeight} +
-                ${props.theme.spacing.headerHeight} )`
+                ${props.theme.spacing.headerHeight} +
+                1rem)
+            `
             : '1rem'
     }};
+
+    @media (max-width: 890px) {
+        padding-top: ${props => {
+            return props.paddingTop
+                ? `calc(${props.theme.spacing.headerHeight} + 1rem)`
+                : '1rem'
+        }};
+    }
 
     @media (min-width: 1200px) {
         max-width: 1200px;

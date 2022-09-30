@@ -13,9 +13,9 @@ const Home: React.FC = () => {
 
             <AboutBanner />
             <AboutShortcuts />
-            <EducationSystem />
-            <MissionVisionValue />
             <OurStory />
+            <MissionVisionValue />
+            <EducationSystem />
         </>
     )
 }

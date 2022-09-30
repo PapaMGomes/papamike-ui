@@ -5,11 +5,11 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer).attrs(fadeIn.default)`
-    ${tw`grid gap-8 grid-cols-5`}
+    ${tw`grid gap-8 grid-cols-5 md:grid-cols-2`}
 `
 
 export const Card = styled.article`
-    ${tw`p-4 uppercase flex flex-col items-center justify-center font-bold rounded-xl cursor-pointer transition-all`}
+    ${tw`p-4 uppercase flex flex-col items-center justify-center font-bold rounded-xl cursor-pointer transition-all duration-700 sm:text-[80%]`}
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.bgPrimary};
     background-image: ${() => `url(${BubbleBG})`};

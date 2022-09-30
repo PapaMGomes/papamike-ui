@@ -11,11 +11,13 @@ export const Text = styled(DefaultText)`
 export const Container = styled.section.attrs(fadeIn.default)``
 
 export const Content = styled.article`
-    ${tw`mt-6 grid gap-6 grid-cols-2`}
+    scroll-snap-type: x mandatory;
+    ${tw`mt-6 grid gap-6 grid-cols-2 sm:flex sm:overflow-x-auto sm:py-5`}
 `
 
 export const Card = styled.div`
-    ${tw`p-4 rounded-2xl shadow-md`}
+    scroll-snap-align: center;
+    ${tw`p-4 rounded-2xl shadow-md sm:min-w-[70vw]`}
     background: ${({ theme }) => theme.colors.bgSecondary};
 `
 

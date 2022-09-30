@@ -16,10 +16,10 @@ export const Title = styled.p`
 `
 
 export const Content = styled.div`
-    ${tw`mt-6 flex justify-between`}
+    ${tw`mt-6 flex justify-between sm:flex-col`}
 
     > div {
-        ${tw`w-[calc(50% - 12px)]`}
+        ${tw`w-[calc(50% - 12px)] sm:w-full sm:mb-4`}
     }
 `
 
@@ -51,6 +51,6 @@ export const Link = styled.a`
     }
 
     > svg {
-        ${tw``}
+        ${tw`ml-2`}
     }
 `

@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import ValueContent from './value-content'
 import VisionContent from './vision-content'
 import MissionContent from './mission-content'
-import { Container, Content, ItemsContainer, Item } from './styles'
+import AppModal from '@/components/common/app-modal'
+import { Container, ItemsContainer, Item } from './styles'
 import { GiTargetArrows, GiSemiClosedEye, GiDiamondHard } from 'react-icons/gi'
 
 const MissionVisionValue: React.FC = () => {
@@ -28,25 +29,40 @@ const MissionVisionValue: React.FC = () => {
     ]
 
     const initialContent = items[0]
+    const [isOpen, setisOpen] = useState(false)
     const [currentContent, setCurrentContent] = useState(initialContent)
 
-    return (
-        <Container>
-            <Content>{currentContent.content}</Content>
+    const handleSelect = (item: any) => {
+        setCurrentContent(item)
+        setisOpen(true)
+    }
 
-            <ItemsContainer>
-                {items.map((item, index) => (
-                    <Item
-                        key={index}
-                        isActive={currentContent.id === item.id}
-                        onMouseEnter={() => setCurrentContent(item)}
-                    >
-                        {item.icon}
-                        {item.title}
-                    </Item>
-                ))}
-            </ItemsContainer>
-        </Container>
+    return (
+        <>
+            <Container>
+                <ItemsContainer>
+                    {items.map((item, index) => (
+                        <Item
+                            key={index}
+                            onClick={() => handleSelect(item)}
+                            isActive={currentContent.id === item.id}
+                        >
+                            {item.icon}
+                            {item.title}
+                        </Item>
+                    ))}
+                </ItemsContainer>
+            </Container>
+
+            <AppModal
+                width="80vw"
+                isOpen={isOpen}
+                onClickClose={() => setisOpen(false)}
+                onBackdropClick={() => setisOpen(false)}
+            >
+                <Container>{currentContent.content}</Container>
+            </AppModal>
+        </>
     )
 }
 

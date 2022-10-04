@@ -12,7 +12,7 @@ export const Container = styled.section.attrs(fadeIn.right)`
 `
 
 export const Nav = styled(AppContainer)`
-    ${tw`flex list-none py-0 pl-12 rounded-bl-3xl `}
+    ${tw`h-full flex list-none py-0 pl-12 rounded-bl-3xl`}
     background: ${({ theme }) => theme.colors.primary};
 `
 
@@ -37,6 +37,6 @@ export const ItemTitle = styled.span`
     color: ${({ theme }) => theme.colors.bgSecondary};
 
     > svg {
-        ${tw`text-lg ml-2`}
+        ${tw`text-[1.2rem] ml-2`}
     }
 `

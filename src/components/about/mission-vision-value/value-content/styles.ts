@@ -23,4 +23,5 @@ export const Card = styled.div`
 
 export const CardTitle = styled.p`
     ${tw`text-center font-bold mb-2`}
+    color: ${({ theme }) => theme.colors.primary};
 `

@@ -10,7 +10,7 @@ export const Title = styled.p`
 export const Text = styled.p``
 
 export const Container = styled(AppContainer)`
-    ${tw`mb-6 flex sm:flex-col-reverse`}
+    ${tw`my-6 flex sm:flex-col-reverse`}
 `
 
 export const Content = styled.article`
@@ -18,13 +18,14 @@ export const Content = styled.article`
 `
 
 export const ItemsContainer = styled.article`
-    ${tw`w-2/5 flex flex-col justify-between sm:flex-row sm:w-full sm:mb-8`}
+    ${tw`flex  justify-between flex-row w-full `}
 `
 
 interface ItemProps {
     isActive?: boolean
 }
 export const Item = styled.span<ItemProps>`
+    ${tw`sm:mb-0 mr-2 sm:h-28`}
     ${tw`sm:mb-0 sm:mr-2 sm:h-28`}
     ${tw`h-36 w-full mb-2 flex flex-col items-center justify-center font-bold rounded-2xl cursor-pointer transition-all`}
     background: ${({ theme }) => theme.colors.primary};

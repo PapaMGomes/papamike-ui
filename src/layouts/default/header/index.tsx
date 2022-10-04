@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SideMenu from './side-menu'
 import MenuItems from './menu-items'
+import { useRouter } from 'next/router'
 import Logo from '@/assets/images/logo.png'
 import { BiLogInCircle } from 'react-icons/bi'
 import { IMenuItem } from '@/interfaces/_menu-item.interface'
@@ -15,28 +16,44 @@ import {
     LineButton,
     HamburgerButton
 } from './styles'
+import { WhatsAppService } from '@/service/_whatsapp.service'
 
 const HeaderDefault: React.FC = () => {
+    const { push: navigate } = useRouter()
+    const whatsAppService = new WhatsAppService()
     const [isShowSideMenu, setIsShowSideMenu] = useState(false)
     const items: IMenuItem[] = [
         {
             name: 'Quem Somos',
-            action: () => {}
+            action: () => navigate('/')
         },
         {
             name: 'Segmentos educacionais',
+            action: () => navigate('/educational-segment'),
             child: [
                 {
                     name: 'Educação infantil',
+                    action: () => navigate('/educational-segment/childish'),
                     child: [
-                        { name: 'Objetivos Específicos', action: () => {} },
+                        {
+                            name: 'Objetivos Específicos',
+                            action: () =>
+                                navigate(
+                                    '/educational-segment/childish?objective'
+                                )
+                        },
                         {
                             name: 'Atividades Extracurriculares',
-                            action: () => {}
+                            action: () =>
+                                navigate(
+                                    '/educational-segment/childish?activity'
+                                )
                         },
-                        { name: 'Cardápio', action: () => {} },
-                        { name: 'Kids - Unidade Centro', action: () => {} },
-                        { name: 'Kids - Unidade Mutinga', action: () => {} }
+                        {
+                            name: 'Unidades',
+                            action: () =>
+                                navigate('/educational-segment/childish?units')
+                        }
                     ]
                 },
                 {
@@ -66,7 +83,7 @@ const HeaderDefault: React.FC = () => {
         },
         {
             name: 'Cursos',
-            action: () => {},
+            action: () => navigate('/course'),
             child: [
                 { name: 'Técnico em Enfermagem', action: () => {} },
                 {
@@ -84,11 +101,19 @@ const HeaderDefault: React.FC = () => {
             action: () => {},
             rightSlot: <ImageIcon src={AnhangueraLogo} />
         },
-        { name: 'Contato', action: () => {} }
+        {
+            name: 'Contato',
+            action: () => navigate('/contact')
+        }
     ]
 
-    const goToLogin = () =>
-        window.open('https://papamike.escolaweb.com.br/', '_blank')
+    const goToLogin = () => {
+        const num = '11958885825'
+        const msg = `Olá, vim através do site e tenho interesse em marcar uma visita ao Colégio, no dia 22/10/23`
+
+        whatsAppService.sendMessage(num, msg)
+        // window.open('https://papamike.escolaweb.com.br/', '_blank')
+    }
 
     return (
         <HeaderContainer id="app-header">

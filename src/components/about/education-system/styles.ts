@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const WraperContainer = styled.section`
-    ${tw`mt-4 py-4`}
-
-    background: ${({ theme }) => theme.colors.yellow};
+    ${tw`mb-4`}
 `
 
 export const Container = styled(AppContainer)``

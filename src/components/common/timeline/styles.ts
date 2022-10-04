@@ -27,7 +27,7 @@ export const Item = styled.span.attrs(fadeIn.default)<ItemProps>`
         background: ${({ theme }) => theme.colors.yellow};
         box-shadow: inset 0px 0px 0px 10px
             ${({ isActive, theme }) =>
-                isActive ? theme.colors.primary : theme.colors.gray};
+                isActive ? theme.colors.primary : theme.colors.bgPrimary};
     }
 `
 

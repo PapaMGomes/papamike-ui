@@ -108,7 +108,7 @@ const HeaderDefault: React.FC = () => {
     ]
 
     const goToLogin = () => {
-        const num = '11958885825'
+        const num = '5511992312966'
         const msg = `Olá, vim através do site e tenho interesse em marcar uma visita ao Colégio, no dia 22/10/23`
 
         whatsAppService.sendMessage(num, msg)

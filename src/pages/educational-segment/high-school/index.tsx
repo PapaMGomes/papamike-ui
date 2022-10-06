@@ -1,8 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import AppHead from '@/components/common/app-head'
-import { AppContainer } from '@/styles/css/ts/components'
-import AppTabs, { IAppTabsItem } from '@/components/common/app-tabs'
+import { IAppTabsItem } from '@/components/common/app-tabs'
 import SegmentContainer from '@/components/educational-segment/segment-container'
 
 const HighSchool: React.FC = () => {

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 interface ScrollAnimationProps {
     children: React.ReactNode
-    animation: string
+    animation?: string
 }
 
 const ScrollAnimation: React.FC<ScrollAnimationProps> = props => {
@@ -16,7 +16,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = props => {
 
     const checkVisible = () => {
         if (!elementContainer.current) return
-        const classAnimation = `animate__${animation}`
+        const classAnimation = `animate__${animation || 'fadeInDown'}`
         const element = elementContainer.current as HTMLElement
         const hasClass = element.classList.contains(classAnimation)
 

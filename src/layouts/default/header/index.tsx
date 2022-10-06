@@ -39,44 +39,107 @@ const HeaderDefault: React.FC = () => {
                             name: 'Objetivos Específicos',
                             action: () =>
                                 navigate(
-                                    '/educational-segment/childish?objective'
+                                    '/educational-segment/childish?type=objective'
                                 )
                         },
                         {
                             name: 'Atividades Extracurriculares',
                             action: () =>
                                 navigate(
-                                    '/educational-segment/childish?activity'
+                                    '/educational-segment/childish?type=activity'
                                 )
                         },
                         {
                             name: 'Unidades',
                             action: () =>
-                                navigate('/educational-segment/childish?units')
+                                navigate(
+                                    '/educational-segment/childish?type=units'
+                                )
                         }
                     ]
                 },
                 {
                     name: 'Fundamental I',
+                    action: () =>
+                        navigate('/educational-segment/fundamental-one'),
                     child: [
-                        { name: 'Integral', action: () => {} },
-                        { name: 'Objetivos Gerais', action: () => {} },
-                        { name: 'Proposta Pedagógica', action: () => {} },
-                        { name: 'Atividades Diferenciadas', action: () => {} }
+                        {
+                            name: 'Integral',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/fundamental-one?type=full'
+                                )
+                            }
+                        },
+                        {
+                            name: 'Objetivos Gerais',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/fundamental-one?type=objective'
+                                )
+                            }
+                        },
+                        {
+                            name: 'Proposta Pedagógica',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/fundamental-one?type=pedagogicalProposal'
+                                )
+                            }
+                        },
+                        {
+                            name: 'Atividades Diferenciadas',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/fundamental-one?type=differentiatedActivities'
+                                )
+                            }
+                        }
                     ]
                 },
                 {
                     name: 'Fundamental II',
+                    action: () =>
+                        navigate('/educational-segment/fundamental-two'),
                     child: [
-                        { name: 'Objetivos Gerais', action: () => {} },
-                        { name: 'Proposta Pedagógica', action: () => {} }
+                        {
+                            name: 'Objetivos Gerais',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/fundamental-two?type=objective'
+                                )
+                            }
+                        },
+                        {
+                            name: 'Proposta Pedagógica',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/fundamental-two?type=pedagogicalProposal'
+                                )
+                            }
+                        }
                     ]
                 },
                 {
                     name: 'Ensino médio',
+                    action: () => navigate('/educational-segment/high-school'),
                     child: [
-                        { name: 'Objetivos Gerais', action: () => {} },
-                        { name: 'Proposta Pedagógica', action: () => {} }
+                        {
+                            name: 'Objetivos Gerais',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/high-school?type=objective'
+                                )
+                            }
+                        },
+                        {
+                            name: 'Proposta Pedagógica',
+                            action: () => {
+                                navigate(
+                                    '/educational-segment/high-school?type=pedagogicalProposal'
+                                )
+                            }
+                        }
                     ]
                 }
             ]

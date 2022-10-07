@@ -6,7 +6,7 @@ interface AppContainerProps {
 }
 
 export const AppContainer = styled.section<AppContainerProps>`
-    ${tw`container mx-auto px-8`}
+    ${tw`container mx-auto px-8 sm:px-4`}
     padding-top: ${props => {
         return props.paddingTop
             ? `calc(

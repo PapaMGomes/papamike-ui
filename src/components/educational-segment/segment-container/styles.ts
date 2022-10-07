@@ -5,6 +5,8 @@ import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)``
 
+export const Spacing = styled.br``
+
 export const BannerContent = styled.div`
     ${tw`h-full w-full flex items-center justify-center`}
 `

@@ -1,11 +1,17 @@
 import React from 'react'
-import { Container } from './styles'
+import { ContainerHeaven } from '../styles'
+
+import ChildishAgeGroup from './age-group'
+import ChildishImportance from './importance'
+import ChildishIntroduction from './introduction'
 
 const ChildishSpecificObjectives: React.FC = () => {
     return (
-        <Container>
-            <div>SpecificObjectives Works</div>
-        </Container>
+        <ContainerHeaven>
+            <ChildishIntroduction />
+            <ChildishImportance />
+            <ChildishAgeGroup />
+        </ContainerHeaven>
     )
 }
 

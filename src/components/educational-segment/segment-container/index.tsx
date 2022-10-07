@@ -1,8 +1,8 @@
+import React, { ReactNode, useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import AppBanner from '@/components/common/app-banner'
 import AppTabs, { IAppTabsItem } from '@/components/common/app-tabs'
-import { useRouter } from 'next/router'
-import React, { ReactNode, useEffect, useState } from 'react'
-import { Container, BannerContent, BannerTitle } from './styles'
+import { Container, Spacing, BannerContent, BannerTitle } from './styles'
 
 interface SegmentContainerProps {
     tabItems: IAppTabsItem[]
@@ -34,22 +34,26 @@ const SegmentContainer: React.FC<SegmentContainerProps> = props => {
     }
 
     return (
-        <Container paddingTop>
-            <AppBanner bgImage={bannerImage}>
-                <BannerContent>
-                    <BannerTitle>{bannerTitle}</BannerTitle>
-                </BannerContent>
-            </AppBanner>
+        <>
+            <Container paddingTop>
+                <AppBanner bgImage={bannerImage}>
+                    <BannerContent>
+                        <BannerTitle>{bannerTitle}</BannerTitle>
+                    </BannerContent>
+                </AppBanner>
 
-            <br />
+                <Spacing />
 
-            <AppTabs
-                items={tabItems}
-                currentId={currentTab}
-                onSelect={({ id }) => onTabChange(id as string)}
-            />
+                <AppTabs
+                    items={tabItems}
+                    currentId={currentTab}
+                    onSelect={({ id }) => onTabChange(id as string)}
+                />
+
+                <Spacing />
+            </Container>
             {contentControl[currentTab]}
-        </Container>
+        </>
     )
 }
 

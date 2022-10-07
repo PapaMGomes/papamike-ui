@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Button } from './styles'
+import { Container, Content, Button } from './styles'
 
 export interface IAppTabsItem {
     id?: string
@@ -23,15 +23,17 @@ const AppTabs: React.FC<AppTabsProps> = props => {
 
     return (
         <Container>
-            {items.map((item, index) => (
-                <Button
-                    key={index}
-                    onClick={() => handleClick(item)}
-                    isActive={currentId === item.id}
-                >
-                    {item.name}
-                </Button>
-            ))}
+            <Content>
+                {items.map((item, index) => (
+                    <Button
+                        key={index}
+                        onClick={() => handleClick(item)}
+                        isActive={currentId === item.id}
+                    >
+                        {item.name}
+                    </Button>
+                ))}
+            </Content>
         </Container>
     )
 }

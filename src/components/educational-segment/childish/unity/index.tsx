@@ -1,11 +1,15 @@
 import React from 'react'
-import { Container } from './styles'
+import { ContainerSimpleStar } from '../styles'
+
+import UnityIntroduction from './introduction'
+import Units from './units'
 
 const ChildishUnity: React.FC = () => {
     return (
-        <Container>
-            <div>Unity Works</div>
-        </Container>
+        <ContainerSimpleStar>
+            <UnityIntroduction />
+            <Units />
+        </ContainerSimpleStar>
     )
 }
 

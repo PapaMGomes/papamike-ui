@@ -4,6 +4,7 @@ import {
     Container,
     Text,
     Title,
+    Waves,
     ItemsGroup,
     Card,
     CardTitle,
@@ -83,6 +84,7 @@ const ChildishAgeGroup: React.FC = () => {
 
     return (
         <ContainerWrapper>
+            <Waves />
             <Container>
                 <ItemsGroup>
                     {items.map((item, index) => (

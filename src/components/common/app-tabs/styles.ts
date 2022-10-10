@@ -1,5 +1,4 @@
 import { AppButton } from '@/styles/css/ts/components'
-import { darken } from 'polished'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
@@ -23,9 +22,9 @@ export const Button = styled(AppButton)<ButtonProps>`
     ${tw`sm:min-w-[auto] sm:px-2 sm:mr-4`}
     ${tw`px-6 min-w-[155px] mr-6 text-base uppercase h-14 flex items-center justify-center whitespace-nowrap`}
 
-    border: 1px solid ${({ isActive, theme }) =>
-        isActive ? darken(0.1, theme.colors.primary) : 'transparent'};
-
+    font-weight: ${({ isActive }) => (isActive ? 'bold' : 'normal')};
+    background: ${({ isActive, theme }) =>
+        isActive ? theme.colors.yellow : 'transparent'};
     color: ${({ isActive, theme }) =>
-        isActive ? theme.colors.yellow : theme.colors.bgSecondary};
+        isActive ? theme.colors.primary : theme.colors.bgSecondary};
 `

@@ -3,7 +3,7 @@ import { Container, Slide } from './styles'
 import { useResponsivePerPage } from '@/hooks/slider'
 import { Splide, SplideSlide, Options } from '@splidejs/react-splide'
 import { IResponsiveItemsPerPage } from '@/interfaces/_slider.interface'
-
+import ImageContainer from './image-container'
 export interface OptionType extends Options {
     custom?: {
         perPageResponsive?: IResponsiveItemsPerPage
@@ -15,12 +15,11 @@ interface CarouselProps {
     children: React.ReactNode
     perPageResponsive?: IResponsiveItemsPerPage
 }
-
 interface SlideContainerProps {
     children: React.ReactNode
 }
 
-export const SlideContainer: React.FC<SlideContainerProps> = ({ children }) => {
+const SlideContainer: React.FC<SlideContainerProps> = ({ children }) => {
     return (
         <SplideSlide>
             <Slide>{children}</Slide>
@@ -66,3 +65,4 @@ const Carousel: React.FC<CarouselProps> = props => {
 }
 
 export default Carousel
+export { ImageContainer, SlideContainer }

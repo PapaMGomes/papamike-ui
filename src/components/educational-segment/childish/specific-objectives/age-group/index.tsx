@@ -1,10 +1,9 @@
+import WavesContainer from '@/components/common/waves-container'
 import React, { useState } from 'react'
 import {
-    ContainerWrapper,
     Container,
     Text,
     Title,
-    Waves,
     ItemsGroup,
     Card,
     CardTitle,
@@ -83,8 +82,7 @@ const ChildishAgeGroup: React.FC = () => {
     const [currentItem, setCurrentItem] = useState(initialItem)
 
     return (
-        <ContainerWrapper>
-            <Waves />
+        <WavesContainer>
             <Container>
                 <ItemsGroup>
                     {items.map((item, index) => (
@@ -105,7 +103,7 @@ const ChildishAgeGroup: React.FC = () => {
                     {currentItem.content}
                 </Content>
             </Container>
-        </ContainerWrapper>
+        </WavesContainer>
     )
 }
 

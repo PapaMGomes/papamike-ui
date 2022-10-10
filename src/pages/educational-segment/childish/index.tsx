@@ -17,8 +17,8 @@ const Childish: React.FC = () => {
     }
 
     const tabItems: IAppTabsItem[] = [
-        { id: 'objective', name: 'Objetivos especificos' },
-        { id: 'activity', name: 'Atividades extracurriculares' },
+        { id: 'objective', name: 'Objetivos' },
+        { id: 'activity', name: 'Atividades' },
         { id: 'units', name: 'Unidades' }
     ]
 

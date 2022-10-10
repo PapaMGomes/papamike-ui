@@ -7,20 +7,28 @@ export const Container = styled(AppContainer)`
 `
 
 export const Card = styled.article`
-    ${tw`p-8 shadow-md rounded-2xl flex flex-col items-center justify-center`}
+    ${tw`p-8 shadow-md rounded-2xl flex items-center`}
     background: ${({ theme }) => theme.colors.bgSecondary};
 `
 
-export const Image = styled.img`
-    ${tw`mb-4 w-44`}
+export const ImageContainer = styled.figure`
+    ${tw`flex flex-col items-center mr-8`}
 `
 
+export const Image = styled.img`
+    ${tw`mb-4 w-36`}
+`
+
+export const CardContent = styled.div``
+
 export const Title = styled.p`
-    ${tw`font-bold text-lg mt-8 mb-4`}
+    ${tw`font-bold text-lg`}
     color: ${({ theme }) => theme.colors.primary};
 `
 
-export const Text = styled.p``
+export const Text = styled.p`
+    ${tw`my-4`}
+`
 
 export const Link = styled.a`
     ${tw`font-bold cursor-pointer flex items-center`}

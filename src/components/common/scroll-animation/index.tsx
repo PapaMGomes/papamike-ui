@@ -3,10 +3,11 @@ import React, { useEffect, useRef } from 'react'
 interface ScrollAnimationProps {
     children: React.ReactNode
     animation?: string
+    id?: string
 }
 
 const ScrollAnimation: React.FC<ScrollAnimationProps> = props => {
-    const { children, animation } = props
+    const { children, animation, id } = props
     const elementContainer = useRef(null)
 
     useEffect(() => {
@@ -31,7 +32,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = props => {
     }
 
     return (
-        <div className="animate__animated" ref={elementContainer}>
+        <div className="animate__animated" id={id} ref={elementContainer}>
             {children}
         </div>
     )

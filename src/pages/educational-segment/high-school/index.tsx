@@ -3,13 +3,15 @@ import { useRouter } from 'next/router'
 import AppHead from '@/components/common/app-head'
 import { IAppTabsItem } from '@/components/common/app-tabs'
 import SegmentContainer from '@/components/educational-segment/segment-container'
+import HighSchoolProposal from '@/components/educational-segment/high-school/proposal'
+import HighSchoolObjective from '@/components/educational-segment/high-school/objective'
 
 const HighSchool: React.FC = () => {
     const router = useRouter()
 
     const contentControl = {
-        objective: <b>Works objective</b>,
-        pedagogicalProposal: <b>Works pedagogicalProposal</b>
+        objective: <HighSchoolObjective />,
+        pedagogicalProposal: <HighSchoolProposal />
     }
 
     const tabItems: IAppTabsItem[] = [

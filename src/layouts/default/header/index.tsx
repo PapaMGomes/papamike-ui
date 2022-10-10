@@ -29,21 +29,20 @@ const HeaderDefault: React.FC = () => {
         },
         {
             name: 'Segmentos educacionais',
-            action: () => navigate('/educational-segment'),
             child: [
                 {
                     name: 'Educação infantil',
                     action: () => navigate('/educational-segment/childish'),
                     child: [
                         {
-                            name: 'Objetivos Específicos',
+                            name: 'Objetivos Gerais',
                             action: () =>
                                 navigate(
                                     '/educational-segment/childish?type=objective'
                                 )
                         },
                         {
-                            name: 'Atividades Extracurriculares',
+                            name: 'Atividades',
                             action: () =>
                                 navigate(
                                     '/educational-segment/childish?type=activity'
@@ -88,7 +87,7 @@ const HeaderDefault: React.FC = () => {
                             }
                         },
                         {
-                            name: 'Atividades Diferenciadas',
+                            name: 'Atividades',
                             action: () => {
                                 navigate(
                                     '/educational-segment/fundamental-one?type=differentiatedActivities'

@@ -22,21 +22,6 @@ export const Button = styled(AppButton)`
         color: ${({ theme }) => theme.colors.primary};
     }
 `
-export const ImageSlideContainer = styled.figure`
-    #btnControl {
-        display: none;
-    }
-
-    #btnControl:checked + label > img {
-        width: 70px;
-        height: 74px;
-    }
-
-    #btnLeft:active {
-        width: 70px;
-        height: 74px;
-    }
-`
 
 export const ImageSlide = styled.img`
     ${tw`w-80 rounded-2xl shadow transition-all duration-500`}

@@ -20,9 +20,8 @@ interface ButtonProps {
 }
 export const Button = styled(AppButton)<ButtonProps>`
     ${tw`sm:min-w-[auto] sm:px-2 sm:mr-4`}
-    ${tw`px-6 min-w-[155px] mr-6 text-base uppercase h-14 flex items-center justify-center whitespace-nowrap`}
+    ${tw`px-6 min-w-[155px] mr-6 font-bold text-base uppercase h-14 flex items-center justify-center whitespace-nowrap`}
 
-    font-weight: ${({ isActive }) => (isActive ? 'bold' : 'normal')};
     background: ${({ isActive, theme }) =>
         isActive ? theme.colors.yellow : 'transparent'};
     color: ${({ isActive, theme }) =>

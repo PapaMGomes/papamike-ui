@@ -13,6 +13,10 @@ export const Container = styled(AppContainer)`
     ${tw`flex justify-between items-center`}
 `
 
+export const Article = styled.article`
+    ${tw`flex`}
+`
+
 export const ImageContainer = styled.figure``
 
 export const Image = styled.img.attrs(fadeIn.left)`
@@ -24,20 +28,15 @@ export const Content = styled.article.attrs(fadeIn.down)`
 `
 
 export const Button = styled(AppButton).attrs(fadeIn.right)`
-    ${tw`p-1 pl-4 flex items-center justify-between transition-all duration-500 md:hidden`}
+    ${tw`pl-4 py-3 flex ml-3 items-center justify-between transition-all duration-500 md:hidden`}
 
     > svg {
-        ${tw`text-xl ml-2`}
+        ${tw`text-lg ml-4 mr-2`}
     }
-`
 
-export const HamburgerButton = styled(AppButton).attrs(fadeIn.right)`
-    ${tw`w-10 h-10 p-1 px-2 flex-col justify-evenly rounded-md hidden md:flex`}
-`
-
-export const LineButton = styled.span`
-    ${tw`w-full h-1 rounded-md`}
-    background: ${({ theme }) => theme.colors.bgSecondary};
+    &:hover {
+        color: ${({ theme }) => theme.colors.yellow};
+    }
 `
 
 export const ImageIcon = styled.img`

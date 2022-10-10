@@ -12,11 +12,13 @@ import {
     ImageContainer,
     Image,
     Button,
-    ImageIcon,
-    LineButton,
-    HamburgerButton
+    Article,
+    ImageIcon
 } from './styles'
 import { WhatsAppService } from '@/service/_whatsapp.service'
+import AppHamburguerButton from '@/components/common/app-hamburguer-button'
+import { GiTeacher } from 'react-icons/gi'
+import { FaUserAstronaut } from 'react-icons/fa'
 
 const HeaderDefault: React.FC = () => {
     const { push: navigate } = useRouter()
@@ -25,47 +27,44 @@ const HeaderDefault: React.FC = () => {
     const items: IMenuItem[] = [
         {
             name: 'Quem Somos',
-            action: () => navigate('/')
+            action: () => goTo('/')
         },
         {
             name: 'Segmentos educacionais',
             child: [
                 {
                     name: 'Educação infantil',
-                    action: () => navigate('/educational-segment/childish'),
+                    action: () => goTo('/educational-segment/childish'),
                     child: [
                         {
                             name: 'Objetivos Gerais',
                             action: () =>
-                                navigate(
+                                goTo(
                                     '/educational-segment/childish?type=objective'
                                 )
                         },
                         {
                             name: 'Atividades',
                             action: () =>
-                                navigate(
+                                goTo(
                                     '/educational-segment/childish?type=activity'
                                 )
                         },
                         {
                             name: 'Unidades',
                             action: () =>
-                                navigate(
-                                    '/educational-segment/childish?type=units'
-                                )
+                                goTo('/educational-segment/childish?type=units')
                         }
                     ]
                 },
                 {
                     name: 'Fundamental I',
-                    action: () =>
-                        navigate('/educational-segment/fundamental-one'),
+                    action: () => goTo('/educational-segment/fundamental-one'),
                     child: [
                         {
                             name: 'Integral',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/fundamental-one?type=full'
                                 )
                             }
@@ -73,7 +72,7 @@ const HeaderDefault: React.FC = () => {
                         {
                             name: 'Objetivos Gerais',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/fundamental-one?type=objective'
                                 )
                             }
@@ -81,7 +80,7 @@ const HeaderDefault: React.FC = () => {
                         {
                             name: 'Proposta Pedagógica',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/fundamental-one?type=pedagogicalProposal'
                                 )
                             }
@@ -89,7 +88,7 @@ const HeaderDefault: React.FC = () => {
                         {
                             name: 'Atividades',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/fundamental-one?type=differentiatedActivities'
                                 )
                             }
@@ -98,13 +97,12 @@ const HeaderDefault: React.FC = () => {
                 },
                 {
                     name: 'Fundamental II',
-                    action: () =>
-                        navigate('/educational-segment/fundamental-two'),
+                    action: () => goTo('/educational-segment/fundamental-two'),
                     child: [
                         {
                             name: 'Objetivos Gerais',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/fundamental-two?type=objective'
                                 )
                             }
@@ -112,7 +110,7 @@ const HeaderDefault: React.FC = () => {
                         {
                             name: 'Proposta Pedagógica',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/fundamental-two?type=pedagogicalProposal'
                                 )
                             }
@@ -121,12 +119,12 @@ const HeaderDefault: React.FC = () => {
                 },
                 {
                     name: 'Ensino médio',
-                    action: () => navigate('/educational-segment/high-school'),
+                    action: () => goTo('/educational-segment/high-school'),
                     child: [
                         {
                             name: 'Objetivos Gerais',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/high-school?type=objective'
                                 )
                             }
@@ -134,7 +132,7 @@ const HeaderDefault: React.FC = () => {
                         {
                             name: 'Proposta Pedagógica',
                             action: () => {
-                                navigate(
+                                goTo(
                                     '/educational-segment/high-school?type=pedagogicalProposal'
                                 )
                             }
@@ -145,7 +143,7 @@ const HeaderDefault: React.FC = () => {
         },
         {
             name: 'Cursos',
-            action: () => navigate('/course'),
+            action: () => goTo('/course'),
             child: [
                 { name: 'Técnico em Enfermagem', action: () => {} },
                 {
@@ -165,9 +163,14 @@ const HeaderDefault: React.FC = () => {
         },
         {
             name: 'Contato',
-            action: () => navigate('/contact')
+            action: () => goTo('/contact')
         }
     ]
+
+    const goTo = (route: string) => {
+        navigate(route)
+        setIsShowSideMenu(false)
+    }
 
     const goToLogin = () => {
         // const num = '5511992312966'
@@ -184,16 +187,21 @@ const HeaderDefault: React.FC = () => {
                     <Image src={Logo} alt="Papa Mike" />
                 </ImageContainer>
 
-                <Button onClick={goToLogin}>
-                    Meu acesso
-                    <BiLogInCircle />
-                </Button>
+                <Article>
+                    <Button onClick={goToLogin}>
+                        Área do professor
+                        <GiTeacher />
+                    </Button>
 
-                <HamburgerButton onClick={() => setIsShowSideMenu(true)}>
-                    <LineButton />
-                    <LineButton />
-                    <LineButton />
-                </HamburgerButton>
+                    <Button onClick={goToLogin}>
+                        Área do aluno
+                        <FaUserAstronaut />
+                    </Button>
+
+                    <AppHamburguerButton
+                        onClick={() => setIsShowSideMenu(true)}
+                    />
+                </Article>
             </Container>
 
             <MenuItems items={items} />

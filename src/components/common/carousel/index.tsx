@@ -33,7 +33,7 @@ const Carousel: React.FC<CarouselProps> = props => {
     const perPage = useResponsivePerPage(options?.custom?.perPageResponsive)
 
     const _getCleanOption = () => {
-        const clone = Object.assign({}, options)
+        const clone = options || {}
         delete clone.custom
 
         return clone
@@ -59,7 +59,9 @@ const Carousel: React.FC<CarouselProps> = props => {
 
     return (
         <Container padding={padding}>
-            <Splide options={splideOptions}>{children}</Splide>
+            <Splide options={{ ...options, ...splideOptions }}>
+                {children}
+            </Splide>
         </Container>
     )
 }

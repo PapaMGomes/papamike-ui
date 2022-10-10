@@ -18,6 +18,7 @@ import Carousel, {
 import ScrollAnimation from '@/components/common/scroll-animation'
 import WavesContainer from '@/components/common/waves-container'
 import { FUNDAMENTAL_ONE_INTEGRAL_IMAGES } from '@/config/gallery/funtamental-one.gallery'
+import { ContainerHeaven } from '../styles'
 
 const FundamentalOneIntegral: React.FC = () => {
     const carouselOptions: OptionType = {
@@ -41,7 +42,7 @@ const FundamentalOneIntegral: React.FC = () => {
     ]
 
     return (
-        <>
+        <ContainerHeaven>
             <Container>
                 <Title>Integral</Title>
 
@@ -84,7 +85,7 @@ const FundamentalOneIntegral: React.FC = () => {
                     </GalleryContainer>
                 </WavesContainer>
             </ScrollAnimation>
-        </>
+        </ContainerHeaven>
     )
 }
 

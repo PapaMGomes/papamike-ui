@@ -18,6 +18,10 @@ export const Content = styled.article`
     scroll-snap-type: x mandatory;
 `
 
+export const CardImage = styled.img`
+    ${tw`w-36 h-28 rounded-full object-cover mb-2`}
+`
+
 export const Card = styled.div`
     ${tw`sm:min-w-[86vw] sm:px-8`}
     ${tw`py-8 px-12 rounded-2xl shadow-md flex flex-col items-center transition-all duration-500`}

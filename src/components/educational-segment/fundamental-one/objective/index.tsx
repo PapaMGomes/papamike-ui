@@ -9,6 +9,7 @@ import Carousel, {
     OptionType,
     SlideContainer
 } from '@/components/common/carousel'
+import { ContainerHeaven } from '../styles'
 
 const FundamentalOneObjective: React.FC = () => {
     const carouselOptions: OptionType = {
@@ -18,7 +19,7 @@ const FundamentalOneObjective: React.FC = () => {
     }
 
     return (
-        <>
+        <ContainerHeaven>
             <Container>
                 <Title>Objetivos Gerais</Title>
 
@@ -59,7 +60,7 @@ const FundamentalOneObjective: React.FC = () => {
                     </GalleryContainer>
                 </WavesContainer>
             </ScrollAnimation>
-        </>
+        </ContainerHeaven>
     )
 }
 

@@ -20,7 +20,7 @@ export const Article = styled.article`
 export const ImageContainer = styled.figure``
 
 export const Image = styled.img.attrs(fadeIn.left)`
-    ${tw`w-32 sm:w-20 sm:h-12`}
+    ${tw`w-32 sm:w-20 sm:h-12 cursor-pointer`}
 `
 
 export const Content = styled.article.attrs(fadeIn.down)`

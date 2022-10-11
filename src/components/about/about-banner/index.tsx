@@ -19,7 +19,7 @@ const AboutBanner: React.FC = () => {
 
     const [currentMatriculation, setCurrentMatriculation] = useState({})
     const matriculationsDates = [
-        '2022-10-09',
+        '2022-10-11',
         '2022-10-22',
         '2022-10-29',
         '2022-11-05',

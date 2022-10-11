@@ -173,17 +173,13 @@ const HeaderDefault: React.FC = () => {
     }
 
     const goToLogin = () => {
-        // const num = '5511992312966'
-        // const msg = `Olá, vim através do site e tenho interesse em marcar uma visita ao Colégio, no dia 22/10/23`
-
-        // whatsAppService.sendMessage(num, msg)
         window.open('https://papamike.escolaweb.com.br/', '_blank')
     }
 
     return (
         <HeaderContainer id="app-header">
             <Container>
-                <ImageContainer>
+                <ImageContainer onClick={() => navigate('/')}>
                     <Image src={Logo} alt="Papa Mike" />
                 </ImageContainer>
 

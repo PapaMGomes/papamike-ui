@@ -51,8 +51,11 @@ const AboutBanner: React.FC = () => {
     }
 
     const data = [
-        <IntroductionBanner />,
-        <MatriculationBanner data={currentMatriculation} />
+        <IntroductionBanner key="IntroductionBanner" />,
+        <MatriculationBanner
+            key="MatriculationBanner"
+            data={currentMatriculation}
+        />
     ]
 
     return (

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 
 export const AppFormGroup = styled.div`
-    ${tw`w-auto mb-4`}
+    ${tw`w-auto mb-5`}
 
     > label {
         ${tw`block mb-2`}
@@ -23,8 +23,12 @@ export const AppFormGroup = styled.div`
         }
     }
 
+    > textarea {
+        ${tw`h-auto`}
+    }
+
     > span {
-        ${tw`text-sm absolute mt-1`}
-        color: ${props => props.theme.colors.primary};
+        ${tw`text-sm absolute mt-0.5`}
+        color: ${props => props.theme.colors.red};
     }
 `

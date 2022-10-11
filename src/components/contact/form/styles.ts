@@ -1,10 +1,10 @@
+import tw from 'twin.macro'
+import styled from 'styled-components'
 import {
     AppButton,
     AppContainer,
     AppFormGroup
 } from '@/styles/css/ts/components'
-import styled from 'styled-components'
-import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
     ${tw`flex`}
@@ -21,7 +21,7 @@ export const ImageContainer = styled.section`
 export const Image = styled.img``
 
 export const Nav = styled.nav`
-    ${tw`mb-8 flex justify-between`}
+    ${tw`my-8 flex justify-between`}
 `
 
 export const Article = styled.article``
@@ -46,5 +46,9 @@ export const Textarea = styled.textarea``
 export const Span = styled.span``
 
 export const Button = styled(AppButton)`
-    ${tw`min-w-[100px]`}
+    ${tw`pl-6 pr-5 min-w-[100px] uppercase font-bold flex items-center justify-center`}
+
+    > svg {
+        ${tw`text-[1.2rem] ml-2`}
+    }
 `

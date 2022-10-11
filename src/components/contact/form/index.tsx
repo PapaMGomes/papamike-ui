@@ -1,5 +1,6 @@
 import React from 'react'
 import * as yup from 'yup'
+import { FiSend } from 'react-icons/fi'
 import { useForm } from 'react-hook-form'
 import { setLoading } from '@/hooks/loading.hook'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -47,7 +48,6 @@ const ContactForm: React.FC = () => {
     } = useForm<IContact>({ resolver: yupResolver(contactForm) })
 
     const handleSubmitForm = async (model: IContact) => {
-        console.log('MODEL :', model)
         setLoading(true, 'Enviando o seu contato...')
 
         try {
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
             alertService.success(data.message)
             reset()
         } catch (error) {
-            alertService.error('Ocorreu um erro ao enviar o currículo')
+            alertService.error('Ocorreu um erro ao enviar o contato')
         } finally {
             setLoading(false)
         }
@@ -82,7 +82,10 @@ const ContactForm: React.FC = () => {
                             </Text>
                         </Article>
 
-                        <Button>Enviar</Button>
+                        <Button>
+                            Enviar
+                            <FiSend />
+                        </Button>
                     </Nav>
 
                     <FormGroup>

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer).attrs(fadeIn.default)`
-    ${tw`grid gap-8 grid-cols-5 md:grid-cols-2`}
+    ${tw`grid gap-8 grid-cols-4 md:grid-cols-2`}
 `
 
 export const Card = styled.article`

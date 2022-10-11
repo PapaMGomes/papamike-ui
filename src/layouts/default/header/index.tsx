@@ -143,16 +143,14 @@ const HeaderDefault: React.FC = () => {
         },
         {
             name: 'Cursos',
-            action: () => goTo('/course'),
             child: [
-                { name: 'Técnico em Enfermagem', action: () => {} },
+                {
+                    name: 'Técnico em Enfermagem',
+                    action: () => goTo('/course/nursing-technician')
+                },
                 {
                     name: 'Cursos Livres',
-                    action: () => {},
-                    child: [
-                        { name: 'Enfermagem', action: () => {} },
-                        { name: 'Estética', action: () => {} }
-                    ]
+                    action: () => goTo('/course/free-course')
                 }
             ]
         },

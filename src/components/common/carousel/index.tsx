@@ -33,7 +33,7 @@ const Carousel: React.FC<CarouselProps> = props => {
     const perPage = useResponsivePerPage(options?.custom?.perPageResponsive)
 
     const _getCleanOption = () => {
-        const clone = options || {}
+        const clone = Object.assign({}, options)
         delete clone.custom
 
         return clone

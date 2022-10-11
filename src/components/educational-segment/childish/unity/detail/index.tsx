@@ -24,6 +24,7 @@ const UnitDetail: React.FC<UnitDetailProps> = props => {
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
+        // perPage: 3,
         custom: {
             perPageResponsive: {
                 xs: 2,

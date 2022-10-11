@@ -28,17 +28,17 @@ const FundamentalOneIntegral: React.FC = () => {
     }
 
     const items = [
-        `Café da manhã e almoço com sobremesa (balanceado por equipe de nutricionistas).`,
-        `Atividades Esportivas.`,
-        `Hora do Conto: Literatura Infantil.`,
-        `Projetos temáticos: Datas comemorativas.`,
-        `Reforço escolar e orientação em pesquisas.`,
-        `Informática: Jogos Digitais e Pedagógicos.`,
-        `Horário disponível para realização da lição de casa.`,
-        `Momento de Relaxamento.`,
-        `Recreação de Oficinas: Artesanatos, Jogos, Culinária, Sessão pipoca.`,
-        `Festas Temáticas para comemorar os aniversariantes do Mês na última sexta-feira.`,
-        `Auxílio na centralidade dos estudantes com aprendizagem permanente, inclusão, gestão democrática e organização das tarefas.`
+        `Café da manhã e almoço com sobremesa (balanceado por equipe de nutricionistas)`,
+        `Atividades Esportivas`,
+        `Hora do Conto: Literatura Infantil`,
+        `Projetos temáticos: Datas comemorativas`,
+        `Reforço escolar e orientação em pesquisas`,
+        `Informática: Jogos Digitais e Pedagógicos`,
+        `Horário disponível para realização da lição de casa`,
+        `Momento de Relaxamento`,
+        `Recreação de Oficinas: Artesanatos, Jogos, Culinária, Sessão pipoca`,
+        `Festas Temáticas para comemorar os aniversariantes do Mês na última sexta-feira`,
+        `Auxílio na centralidade dos estudantes com aprendizagem permanente, inclusão, gestão democrática e organização das tarefas`
     ]
 
     return (

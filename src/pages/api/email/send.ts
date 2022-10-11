@@ -1,5 +1,5 @@
+import { TRANSPORT_CONFIG } from '@/config/constants/email.config'
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { TRANSPORT_CONFIG } from '@/config/email.config'
 import nodemailer from 'nodemailer'
 import NextCors from 'nextjs-cors'
 

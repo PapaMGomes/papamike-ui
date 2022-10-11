@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
-    ${tw`grid gap-10 grid-cols-4`}
+    ${tw`grid gap-10 grid-cols-4 sm:grid-cols-2`}
 `
 
 export const Card = styled.article`

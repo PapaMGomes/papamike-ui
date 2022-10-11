@@ -41,8 +41,10 @@ const FundamentalOneActivity: React.FC = () => {
                 <Content>
                     {items.map((item, index) => (
                         <Card key={index} image={item.image}>
-                            <CardTitle>{item.title}</CardTitle>
-                            {item.isOptional && <Label>(Opcional)</Label>}
+                            <CardTitle>
+                                {item.title}
+                                {item.isOptional && <Label>(Opcional)</Label>}
+                            </CardTitle>
                         </Card>
                     ))}
                 </Content>

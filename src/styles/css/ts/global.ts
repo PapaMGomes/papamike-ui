@@ -28,6 +28,7 @@ export default createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+
   }
 
   button {

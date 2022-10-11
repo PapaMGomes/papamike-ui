@@ -2,27 +2,21 @@ import { AppContainer } from '@/styles/css/ts/components'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
+export const ContainerWrapper = styled.section`
+    background: ${({ theme }) => theme.colors.yellow};
+`
+
 export const Container = styled(AppContainer)`
     ${tw`pb-8`}
 `
 
-interface TitleProps {
-    marginTop?: boolean
-}
-export const Title = styled.p<TitleProps>`
+export const Title = styled.p`
     ${tw`font-bold text-lg mb-6`}
     color: ${({ theme }) => theme.colors.primary};
-    margin-top: ${({ marginTop }) => (marginTop ? '1rem' : '0')};
-`
-
-export const Text = styled.p``
-
-export const Article = styled.article`
-    ${tw`mb-8`}
 `
 
 export const ItemsContainer = styled.section`
-    ${tw`grid gap-8 grid-cols-4`}
+    ${tw`grid gap-8 grid-cols-4 sm:grid-cols-1`}
 `
 
 export const Card = styled.div`

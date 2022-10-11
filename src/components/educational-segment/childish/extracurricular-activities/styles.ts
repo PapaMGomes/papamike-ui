@@ -14,8 +14,7 @@ export const Title = styled.p`
 `
 
 export const Content = styled.article`
-    ${tw`grid gap-8 grid-cols-2 sm:flex sm:overflow-x-auto`}
-    scroll-snap-type: x mandatory;
+    ${tw`flex flex-col`}
 `
 
 export const CardImage = styled.img`
@@ -23,21 +22,20 @@ export const CardImage = styled.img`
 `
 
 export const Card = styled.div`
-    ${tw`sm:min-w-[86vw] sm:px-8`}
-    ${tw`py-8 px-12 rounded-2xl shadow-md flex flex-col items-center transition-all duration-500`}
+    ${tw`sm:flex-col`}
+    ${tw`p-8 mb-4 rounded-2xl shadow-md flex items-center`}
     background: ${({ theme }) => theme.colors.bgSecondary};
-    scroll-snap-align: center;
-
-    &:hover {
-        transform: scale(0.94);
-    }
 `
 
-export const CardTitle = styled.p`
-    ${tw`mb-4 font-bold cursor-default`}
+export const CardContent = styled.section`
+    ${tw`ml-4 sm:ml-0`}
+`
+
+export const CardTitle = styled(Title)`
+    ${tw`sm:text-center`}
     color: ${({ theme }) => theme.colors.primary};
 `
 
 export const Text = styled.p`
-    ${tw`text-center mt-2`}
+    ${tw`sm:text-center`}
 `

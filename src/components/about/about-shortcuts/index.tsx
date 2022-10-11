@@ -21,10 +21,6 @@ const AboutShortcuts: React.FC = () => {
         {
             title: 'Ensino Médio',
             action: () => router.push('/educational-segment/high-school')
-        },
-        {
-            title: 'Cursos',
-            action: () => {}
         }
     ]
 

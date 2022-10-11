@@ -6,6 +6,7 @@ import {
     Content,
     Card,
     CardTitle,
+    CardContent,
     CardImage,
     Text
 } from './styles'
@@ -16,6 +17,7 @@ import GuitarImg from '@/assets/images/activity/guitar.jpg'
 import BalletImg from '@/assets/images/activity/ballet.jpg'
 import HapkidoImg from '@/assets/images/activity/hapkido.jpg'
 import CulturaInglesaImg from '@/assets/images/cultura_inglesa.jpg'
+import ScrollAnimation from '@/components/common/scroll-animation'
 
 const ChildishExtracurricularActivities: React.FC = () => {
     const items = [
@@ -59,11 +61,15 @@ const ChildishExtracurricularActivities: React.FC = () => {
 
                 <Content>
                     {items.map((item, index) => (
-                        <Card key={index}>
-                            <CardImage src={item.image} />
-                            <Title>{item.title}</Title>
-                            <Text>{item.description}</Text>
-                        </Card>
+                        <ScrollAnimation animation="fadeInUp">
+                            <Card key={index}>
+                                <CardImage src={item.image} />
+                                <CardContent>
+                                    <CardTitle>{item.title}</CardTitle>
+                                    <Text>{item.description}</Text>
+                                </CardContent>
+                            </Card>
+                        </ScrollAnimation>
                     ))}
                 </Content>
             </Container>

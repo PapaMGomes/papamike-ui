@@ -18,5 +18,5 @@ export const Text = styled.p`
 `
 
 export const ImageSlide = styled.img`
-    ${tw`w-80 rounded-2xl shadow transition-all duration-500`}
+    ${tw`w-80 rounded-2xl shadow transition-all duration-500 sm:w-full`}
 `

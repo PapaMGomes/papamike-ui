@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
-    ${tw`pb-8`}
+    ${tw`pb-8 sm:pb-20`}
 `
 
 export const ImageSlide = styled.img`
-    ${tw`w-56 h-72 rounded-2xl shadow transition-all duration-500`}
+    ${tw`w-56 h-72 rounded-2xl shadow transition-all duration-500 sm:w-full`}
 `

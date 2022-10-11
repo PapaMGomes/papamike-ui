@@ -1,9 +1,8 @@
 import React from 'react'
 import {
+    ContainerWrapper,
     Container,
     Title,
-    Text,
-    Article,
     ItemsContainer,
     Card,
     Map,
@@ -42,10 +41,9 @@ const ContactDetails: React.FC = () => {
     ]
 
     return (
-        <WavesContainer>
+        <ContainerWrapper>
             <Container>
                 <Title>Unidades</Title>
-
                 <ItemsContainer>
                     {unitsAddress.map((item, index) => (
                         <Card key={index}>
@@ -60,7 +58,7 @@ const ContactDetails: React.FC = () => {
                     ))}
                 </ItemsContainer>
             </Container>
-        </WavesContainer>
+        </ContainerWrapper>
     )
 }
 

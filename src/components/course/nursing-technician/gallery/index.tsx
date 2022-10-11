@@ -17,7 +17,7 @@ const NursingTechnicianGallery: React.FC = () => {
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
-        custom: { perPageResponsive: { xs: 2, sm: 2, md: 4, lg: 4, xl: 4 } }
+        custom: { perPageResponsive: { xs: 1, sm: 1, md: 4, lg: 4, xl: 4 } }
     }
 
     const images = [

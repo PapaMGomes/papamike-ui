@@ -8,12 +8,8 @@ export const Container = styled.section`
 `
 
 export const Content = styled.article`
-    ${tw`sm:overflow-x-auto sm:pl-44 sm:pt-4`}
-    ${tw`h-full w-full flex shadow-md items-center justify-around rounded-full`}
-
-    &::-webkit-scrollbar {
-        width: 0px;
-    }
+    ${tw`sm:overflow-x-auto px-4 sm:justify-between`}
+    ${tw`h-16 w-full flex shadow-md items-center justify-around rounded-full`}
 `
 interface ButtonProps {
     isActive?: boolean

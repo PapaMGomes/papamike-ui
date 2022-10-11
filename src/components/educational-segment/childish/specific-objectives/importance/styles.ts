@@ -12,5 +12,5 @@ export const Title = styled.p`
 `
 
 export const Text = styled.p`
-    ${tw`mb-4`}
+    ${tw`mb-4 sm:text-center`}
 `

@@ -11,7 +11,7 @@ const MatriculationBanner: React.FC<MatriculationBannerProps> = props => {
 
     const sendMessage = () => {
         const num = '5511930883080'
-        const msg = `Olá, vim através do site e tenho interesse em marcar uma visita ao Colégio, no dia ${data.date}`
+        const msg = `Olá, vim através do site e tenho interesse em marcar uma visita ao Colégio`
 
         whatsAppService.sendMessage(num, msg)
     }

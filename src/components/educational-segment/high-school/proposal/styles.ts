@@ -14,7 +14,7 @@ export const Text = styled.p`
 `
 
 export const ItemsContainer = styled.article`
-    ${tw`mt-8 grid gap-8 grid-cols-5`}
+    ${tw`mt-8 grid gap-8 grid-cols-5 sm:grid-cols-2`}
 `
 
 export const Card = styled.div`

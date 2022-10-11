@@ -24,16 +24,7 @@ const UnitDetail: React.FC<UnitDetailProps> = props => {
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
-        // perPage: 3,
-        custom: {
-            perPageResponsive: {
-                xs: 2,
-                sm: 2,
-                md: 3,
-                lg: 3,
-                xl: 3
-            }
-        }
+        custom: { perPageResponsive: { xs: 1, sm: 1, md: 3, lg: 3, xl: 3 } }
     }
 
     if (!item.name) return <></>

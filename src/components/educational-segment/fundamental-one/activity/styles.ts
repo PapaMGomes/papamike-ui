@@ -14,21 +14,20 @@ export const Title = styled.p`
 `
 
 export const Content = styled.article`
-    ${tw`grid gap-8 grid-cols-4 sm:flex sm:overflow-x-auto`}
-    scroll-snap-type: x mandatory;
+    ${tw`grid gap-8 grid-cols-4 sm:flex flex-col`}
 `
 
 interface CardProps {
     image?: string
 }
 export const Card = styled.div<CardProps>`
-    ${tw`sm:min-w-[86vw] sm:px-8`}
-    ${tw`w-64 h-40 rounded-2xl shadow-md flex flex-col justify-center items-center transition-all duration-500`}
+    ${tw`sm:min-w-[86vw] `}
+    ${tw`w-64 h-40 rounded-2xl shadow-md flex flex-col justify-end items-center transition-all duration-500`}
 
     background-size: cover;
     background-position: center;
     background-image: ${({ image }) => `url(${image})`};
-    box-shadow: inset 0 0 0 2000px ${({ theme }) => rgba('#2e2d2d', 0.4)};
+    box-shadow: inset 0 0 0 2000px ${() => rgba('#2e2d2d', 0.4)};
 
     &:hover {
         transform: scale(0.94);
@@ -36,10 +35,9 @@ export const Card = styled.div<CardProps>`
 `
 
 export const CardTitle = styled.p`
-    ${tw`w-full py-2 font-extrabold text-center uppercase cursor-default`}
-    color: ${({ theme }) => theme.colors.bgSecondary};
-
-    background: ${() => rgba('#2e2d2d', 0.6)};
+    ${tw`w-full py-2 font-extrabold text-center uppercase cursor-default rounded-b-2xl`}
+    color: ${({ theme }) => theme.colors.yellow};
+    background: ${({ theme }) => theme.colors.primary};
 `
 
 export const Text = styled.p`

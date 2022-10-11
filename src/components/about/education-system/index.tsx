@@ -17,7 +17,7 @@ const EducationSystem: React.FC = () => {
     const items = [
         {
             title: 'Sistema Maxi',
-            animation: 'backInLeft',
+            animation: 'fadeInUp',
             link: `https://sistemamaxi.com.br/`,
             subtitle: 'Ensino Infantil ao Fundamental II',
             description: `Com mais de 30 anos de experiência, referência em educação no Brasil. Com uma proposta inovadora e exclusiva baseada na Pedagogia Afetiva, o Sistema Maxi de Ensino privilegia uma educação de qualidade que valoriza as interações humanas.`
@@ -25,7 +25,7 @@ const EducationSystem: React.FC = () => {
         {
             title: 'Sistema Bernoulli',
             subtitle: 'Ensino Médio',
-            animation: 'backInRight',
+            animation: 'fadeInUp',
             link: `https://www.bernoulli.com.br/sistema-de-ensino/sobre-nos/`,
             description: `Com uma proposta inovadora e exclusiva, o Bernoulli é hoje um dos principais grupos educacionais do Brasil. Com livros atualizados anualmente, através de uma abordagem fluida, com temas relevantes que ajudam o estudante a desenvolver o pensamento crítico, além de uma postura cidadã e consciente.`
         }

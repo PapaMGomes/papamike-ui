@@ -1,12 +1,8 @@
 import React from 'react'
 import { WhatsAppService } from '@/service/_whatsapp.service'
-import { Card, Article, Title, Text, Button } from './styles'
+import { Card, Article, Title, Text, Button, TextContainer } from './styles'
 
-interface MatriculationBannerProps {
-    data: any
-}
-const MatriculationBanner: React.FC<MatriculationBannerProps> = props => {
-    const { data } = props
+const MatriculationBanner: React.FC = () => {
     const whatsAppService = new WhatsAppService()
 
     const sendMessage = () => {
@@ -19,14 +15,13 @@ const MatriculationBanner: React.FC<MatriculationBannerProps> = props => {
     return (
         <Card>
             <Article>
-                <Title>MATRÍCULAS ABERTAS 2023</Title>
-                <Text>Venha conhecer nosso Colégio!</Text>
-                <Text>Apresentação Pedagógica Institucional</Text>
-            </Article>
+                <TextContainer>
+                    <Title>MATRÍCULAS ABERTAS 2023</Title>
+                    <Text>Venha conhecer nosso Colégio!</Text>
+                    <Text>Apresentação Pedagógica Institucional</Text>
+                </TextContainer>
 
-            <Article>
                 <Button onClick={sendMessage}>Tenho interesse!</Button>
-                <Text>{data.address}</Text>
             </Article>
         </Card>
     )

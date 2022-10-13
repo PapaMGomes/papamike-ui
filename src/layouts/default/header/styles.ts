@@ -28,7 +28,7 @@ export const Content = styled.article.attrs(fadeIn.down)`
 `
 
 export const Button = styled(AppButton).attrs(fadeIn.right)`
-    ${tw`pl-4 py-3 flex ml-3 items-center justify-between transition-all duration-500 md:hidden`}
+    ${tw`pl-4 py-3 flex ml-3 items-center justify-between uppercase transition-all duration-500 md:hidden`}
 
     > svg {
         ${tw`text-lg ml-4 mr-2`}

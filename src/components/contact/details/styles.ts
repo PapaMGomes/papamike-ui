@@ -30,7 +30,7 @@ export const CardTitle = styled.p`
 `
 
 export const CardText = styled.p`
-    ${tw`mt-1`}
+    ${tw`my-1 text-center`}
     color: ${({ theme }) => theme.colors.bgSecondary};
 `
 

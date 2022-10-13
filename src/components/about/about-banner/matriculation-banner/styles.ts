@@ -5,11 +5,11 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Card = styled.article`
-    ${tw`p-10 rounded-3xl h-64 shadow-md grid grid-cols-3`}
+    ${tw`p-10 rounded-3xl h-64 shadow-md`}
     ${tw`sm:flex flex-col sm:shadow-[inset 0 0 0 2000px #00000057}]`}
 
     background: ${() => `
-        url(${StudentImage}) right center no-repeat,
+        url(${StudentImage}) right top  no-repeat,
         url(${Blob}) left center no-repeat
     `};
 
@@ -23,25 +23,27 @@ export const Card = styled.article`
     }
 `
 
+export const TextContainer = styled.div`
+    ${tw`flex flex-col justify-start`}
+`
+
 export const Title = styled.p`
     ${tw`text-lg w-full transition-all duration-500 sm:text-base`}
-    text-shadow: 2px 2px ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.bgSecondary};
+    color: ${({ theme }) => theme.colors.primary};
     font-weight: 900;
 `
 
-export const Text = styled.b`
-    ${tw`mt-2`}
+export const Text = styled.p`
+    ${tw`mt-2 w-full`}
     font-weight: 900;
-    color: ${({ theme }) => theme.colors.bgSecondary};
-    text-shadow: 2px 2px ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
 `
 
 export const Article = styled.article`
-    ${tw`flex flex-col justify-center items-center`}
+    ${tw`flex flex-col justify-center items-center relative`}
 `
 
 export const Button = styled(AppButton)`
-    ${tw`px-8 mt-2 uppercase w-64 sm:mt-4`}
+    ${tw`px-8 mt-4 uppercase w-64`}
     font-weight: 900;
 `

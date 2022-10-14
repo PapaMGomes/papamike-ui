@@ -39,19 +39,24 @@ const AnhangueraCourses: React.FC = () => {
             ? collegeService.getByCategoryId(category.id)
             : collegeService.getAll()
 
+        setSearchTerm('')
         setCourses(courses)
         setCurrentCategory(category)
     }
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target
-
         setSearchTerm(value)
 
         const filterCourses = () => {
-            const courses = value
+            const result = value
                 ? collegeService.getByName(value)
                 : collegeService.getAll()
+
+            const courses = currentCategory
+                ? collegeService.getByCategoryId(currentCategory.id, result)
+                : result
+
             setCourses(courses)
         }
 

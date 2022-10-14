@@ -16,7 +16,7 @@ export const Text = styled.p`
 `
 
 export const FormGroup = styled(AppFormGroup)`
-    ${tw`w-3/5`}
+    ${tw`w-3/5 sm:w-full`}
 
     > input {
         ${tw`rounded-full`}

@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled.section`
-    ${tw`flex items-center justify-between`}
+    ${tw`flex items-center justify-between sm:grid sm:gap-2 sm:grid-cols-2 sm:w-full`}
 `
 
 interface ButtonProps {
     isActive?: boolean
 }
 export const Button = styled(AppButton)<ButtonProps>`
-    ${tw`mr-4 min-w-[155px]`}
+    ${tw`mr-4 min-w-[155px] sm:mr-0`}
 
     &:last-of-type {
         ${tw`mr-0`}

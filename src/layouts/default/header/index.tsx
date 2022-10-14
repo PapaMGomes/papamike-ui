@@ -3,7 +3,6 @@ import SideMenu from './side-menu'
 import MenuItems from './menu-items'
 import { useRouter } from 'next/router'
 import Logo from '@/assets/images/logo.png'
-import { BiLogInCircle } from 'react-icons/bi'
 import { IMenuItem } from '@/interfaces/_menu-item.interface'
 import AnhangueraLogo from '@/assets/images/anhanguera-logo.png'
 import {
@@ -15,14 +14,12 @@ import {
     Article,
     ImageIcon
 } from './styles'
-import { WhatsAppService } from '@/service/_whatsapp.service'
 import AppHamburguerButton from '@/components/common/app-hamburguer-button'
 import { GiTeacher } from 'react-icons/gi'
 import { FaUserAstronaut } from 'react-icons/fa'
 
 const HeaderDefault: React.FC = () => {
     const { push: navigate } = useRouter()
-    const whatsAppService = new WhatsAppService()
     const [isShowSideMenu, setIsShowSideMenu] = useState(false)
     const items: IMenuItem[] = [
         {
@@ -165,7 +162,7 @@ const HeaderDefault: React.FC = () => {
         },
         {
             name: 'Anhanguera',
-            action: () => {},
+            action: () => goTo('/anhanguera'),
             rightSlot: <ImageIcon src={AnhangueraLogo} />
         },
         {

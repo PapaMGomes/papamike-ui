@@ -18,12 +18,10 @@ export default createGlobalStyle`
   }
 
   body {
-    ${tw`text-base`}
-    background: ${props => props.theme.colors.bgPrimary};
-    color: ${props => props.theme.colors.text};
+    ${tw`text-base font-bold`}
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-
+    color: ${props => props.theme.colors.text};
+    background: ${props => props.theme.colors.bgPrimary};
   }
 
   html {

@@ -7,7 +7,7 @@ export const Container = styled(AppContainer)`
 `
 
 export const Content = styled.article`
-    ${tw`flex items-start justify-between`}
+    ${tw`flex items-start justify-between sm:flex-col-reverse sm:items-center`}
 `
 
 export const TextContainer = styled.div`
@@ -24,10 +24,14 @@ export const Text = styled.p`
 `
 
 export const Figure = styled.figure`
-    ${tw`w-2/5 flex flex-col items-center justify-center`}
+    ${tw`w-2/5 flex flex-col items-center justify-center sm:w-full sm:mb-8`}
 
     > p {
         ${tw`mb-0 font-bold`}
+
+        &:last-of-type {
+            color: ${({ theme }) => theme.colors.orange};
+        }
     }
 `
 

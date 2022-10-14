@@ -12,7 +12,7 @@ export const AppFormGroup = styled.div`
     > input,
     > select,
     > textarea {
-        ${tw`w-full h-11 block rounded-xl py-1 px-3 border-2 border-solid`}
+        ${tw`w-full h-11 block rounded-2xl py-1 px-3 border-2 border-solid`}
         color: ${props => props.theme.colors.text};
         text-rendering: optimizeLegibility !important;
         background: ${({ theme }) => rgba(theme.colors.bgPrimary, 0.6)};

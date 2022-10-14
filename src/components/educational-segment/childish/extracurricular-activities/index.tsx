@@ -61,8 +61,8 @@ const ChildishExtracurricularActivities: React.FC = () => {
 
                 <Content>
                     {items.map((item, index) => (
-                        <ScrollAnimation animation="fadeInUp">
-                            <Card key={index}>
+                        <ScrollAnimation key={index} animation="fadeInUp">
+                            <Card>
                                 <CardImage src={item.image} />
                                 <CardContent>
                                     <CardTitle>{item.title}</CardTitle>

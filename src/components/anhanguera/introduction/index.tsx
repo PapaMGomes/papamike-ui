@@ -38,7 +38,8 @@ const AnhangueraIntroduction: React.FC = () => {
 
                 <Figure>
                     <Image src={AnhangueraLogo} />
-                    <Image src={Logo} />
+                    <Title>Anhanguera</Title>
+                    <Text>Osasco - EAD</Text>
                 </Figure>
             </Content>
         </Container>

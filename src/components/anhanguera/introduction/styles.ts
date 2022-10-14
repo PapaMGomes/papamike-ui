@@ -2,10 +2,12 @@ import { AppContainer } from '@/styles/css/ts/components'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
-export const Container = styled(AppContainer)``
+export const Container = styled(AppContainer)`
+    ${tw`mb-8`}
+`
 
 export const Content = styled.article`
-    ${tw`flex items-center justify-between`}
+    ${tw`flex items-start justify-between`}
 `
 
 export const TextContainer = styled.div`
@@ -24,16 +26,11 @@ export const Text = styled.p`
 export const Figure = styled.figure`
     ${tw`w-2/5 flex flex-col items-center justify-center`}
 
-    > img {
-        &:first-of-type {
-            ${tw`w-3/5`}
-        }
-        &:last-of-type {
-            ${tw`relative bottom-10`}
-        }
+    > p {
+        ${tw`mb-0 font-bold`}
     }
 `
 
 export const Image = styled.img`
-    ${tw`w-2/5`}
+    ${tw`w-2/5 mb-2`}
 `

@@ -1,12 +1,12 @@
-import { IPagination } from '@/interfaces/_app-pagination.interface'
 import React, { useEffect, useState } from 'react'
+import { Container, Text, Button } from './styles'
+import { IPagination } from '@/interfaces/_app-pagination.interface'
 import {
     BsChevronLeft,
     BsChevronRight,
     BsChevronDoubleLeft,
     BsChevronDoubleRight
 } from 'react-icons/bs'
-import { Container, Text, Button } from './styles'
 
 interface AppPaginatorProps {
     model: IPagination
@@ -38,9 +38,8 @@ const AppPaginator: React.FC<AppPaginatorProps> = props => {
         onPageChange(model)
     }
 
-    const prevAll = () => {
-        handlePageChange({ ...config, page: 1 })
-    }
+    const prevAll = () => handlePageChange({ ...config, page: 1 })
+    const nextAll = () => handlePageChange({ ...config, page: totalPages })
 
     const prevPage = () => {
         if (!(config.page - 1)) return
@@ -50,10 +49,6 @@ const AppPaginator: React.FC<AppPaginatorProps> = props => {
     const nextPage = () => {
         if (config.page === totalPages) return
         handlePageChange({ ...config, page: config.page + 1 })
-    }
-
-    const nextAll = () => {
-        handlePageChange({ ...config, page: totalPages })
     }
 
     return (

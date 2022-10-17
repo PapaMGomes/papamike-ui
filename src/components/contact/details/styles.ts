@@ -16,7 +16,7 @@ export const Title = styled.p`
 `
 
 export const ItemsContainer = styled.section`
-    ${tw`grid gap-8 grid-cols-4 sm:grid-cols-1`}
+    ${tw`grid gap-8 grid-cols-4 md:grid-cols-2 sm:flex flex-col`}
 `
 
 export const Card = styled.div`

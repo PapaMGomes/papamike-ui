@@ -30,6 +30,7 @@ const AccordionMenu: React.FC<AccordionMenuProps> = props => {
 
     const handleClick = () => {
         if (action) action()
+        else if(hasChild) handleShowSubMenu()
     }
 
     const handleShowSubMenu = () => {

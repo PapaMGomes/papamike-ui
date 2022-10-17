@@ -2,6 +2,7 @@ import tw from 'twin.macro'
 import styled from 'styled-components'
 
 interface AppContainerProps {
+    screen?: boolean
     paddingTop?: boolean
 }
 
@@ -15,6 +16,12 @@ export const AppContainer = styled.section<AppContainerProps>`
                 1rem)
             `
             : '1rem'
+    }};
+
+    min-height: ${props => {
+        return props.screen
+            ? `calc(100vh - ${props.theme.spacing.headerHeight})`
+            : ''
     }};
 
     @media (max-width: 890px) {

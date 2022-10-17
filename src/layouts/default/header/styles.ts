@@ -17,10 +17,17 @@ export const Article = styled.article`
     ${tw`flex`}
 `
 
-export const ImageContainer = styled.figure``
+export const ImageContainer = styled.figure`
+    ${tw`mb-3 flex flex-col items-center`}
+`
 
 export const Image = styled.img.attrs(fadeIn.left)`
-    ${tw`w-32 sm:w-20 sm:h-12 cursor-pointer`}
+    ${tw`sm:w-20 sm:h-12 cursor-pointer`}
+`
+
+export const ImageText = styled.p`
+    ${tw`text-[70%] font-extrabold uppercase md:hidden`}
+    color: ${({ theme }) => theme.colors.primary};
 `
 
 export const Content = styled.article.attrs(fadeIn.down)`

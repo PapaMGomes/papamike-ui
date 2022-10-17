@@ -15,7 +15,7 @@ export const FormContainer = styled.section`
 `
 
 export const ImageContainer = styled.section`
-    ${tw`w-3/5 ml-10 pb-3 flex items-end sm:hidden`}
+    ${tw`w-3/5 ml-10 pb-3 flex items-end md:hidden`}
 `
 
 export const Image = styled.img``

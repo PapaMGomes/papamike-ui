@@ -15,7 +15,7 @@ const FundamentalOneObjective: React.FC = () => {
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
-        custom: { perPageResponsive: { xs: 2, sm: 2, md: 3, lg: 3, xl: 3 } }
+        custom: { perPageResponsive: { xs: 1, sm: 1, md: 2, lg: 3, xl: 3 } }
     }
 
     return (

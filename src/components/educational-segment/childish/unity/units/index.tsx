@@ -2,7 +2,7 @@ import React from 'react'
 import { FaRoute } from 'react-icons/fa'
 import { AiFillCamera } from 'react-icons/ai'
 import { IUnit } from '@/interfaces/unit.interface'
-import CentroFacade from '@/assets/images/units/centro/facade.png'
+import CentroFacade from '@/assets/images/units/centro/facade.jpeg'
 import MutingaFacade from '@/assets/images/units/mutinga/facade.png'
 import {
     Container,
@@ -27,10 +27,10 @@ const Units: React.FC<UnitProps> = props => {
         {
             image: CentroFacade,
             slidesImage: CENTRO_IMAGES,
-            name: 'Papa Mike Kids Centro',
-            mapLink: 'https://goo.gl/maps/gjmjbDjKasbggkTz7',
-            address: 'R. Minas Bogasian, 228 - Centro, Osasco - SP, 06013-010',
-            mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.0023363746693!2d-46.77909424189469!3d-23.53233434617434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff6f9cc35599%3A0xe7143db01dc4fa9a!2sPapa%20Mike%20Kids%20Centro!5e0!3m2!1spt-BR!2sbr!4v1665170355059!5m2!1spt-BR!2sbr'
+            name: 'Papa Kids Santo Antônio',
+            mapLink: 'https://goo.gl/maps/gJ7W3Z981mTszTASA',
+            address: 'Av. Santo Antônio, 1430 - Vila Osasco, Osasco - SP',
+            mapUrl: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7931205823365!2d-46.78376557596664!3d-23.539942124885382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff0cde662533%3A0x5b0f9238ecd6dffc!2sAv.%20Santo%20Ant%C3%B4nio%2C%201430%20-%20Vila%20Osasco%2C%20Osasco%20-%20SP%2C%2006083-200!5e0!3m2!1spt-BR!2sbr!4v1665524779218!5m2!1spt-BR!2sbr`
         },
         {
             image: MutingaFacade,

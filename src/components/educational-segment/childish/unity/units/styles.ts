@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
-    ${tw`grid gap-10 grid-cols-2 sm:flex flex-col`}
+    ${tw`grid gap-10 grid-cols-2 md:flex flex-col`}
 `
 
 export const Card = styled.article`
@@ -16,7 +16,7 @@ export const ImageContainer = styled.figure`
 `
 
 export const Image = styled.img`
-    ${tw`mb-4 w-36`}
+    ${tw`mb-4 w-36 h-36 rounded-full object-cover`}
 `
 
 export const CardContent = styled.div``

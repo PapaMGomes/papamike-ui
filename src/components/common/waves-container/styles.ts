@@ -9,6 +9,6 @@ export const Container = styled.section`
 
 export const Waves = styled.article`
     ${tw`w-full h-28 absolute`}
-
+    filter: ${({ theme }) => `drop-shadow(-4px 0px 0px ${theme.colors.yellow})`}  ;
     background: ${`url(${WaveYellow})`} top;
 `

@@ -11,12 +11,12 @@ import {
     Text
 } from './styles'
 
-import KidsImg from '@/assets/images/activity/kids.jpg'
 import SportImg from '@/assets/images/activity/sport.jpg'
 import GuitarImg from '@/assets/images/activity/guitar.jpg'
 import BalletImg from '@/assets/images/activity/ballet.jpg'
 import HapkidoImg from '@/assets/images/activity/hapkido.jpg'
 import CulturaInglesaImg from '@/assets/images/cultura_inglesa.jpg'
+
 import ScrollAnimation from '@/components/common/scroll-animation'
 
 const ChildishExtracurricularActivities: React.FC = () => {
@@ -39,7 +39,7 @@ const ChildishExtracurricularActivities: React.FC = () => {
 
         {
             image: HapkidoImg,
-            title: 'Hapikido',
+            title: 'Hapkidô',
             description: `Promover o equilíbrio físico, mental e espiritual do praticante, disciplina, respeito ao próximo, autoconfiança, autocontrole, formar pessoas dignas e conscientes para a convivência social harmônica, promover a saúde num todo e a defesa pessoal coreana.`
         },
         {
@@ -47,11 +47,6 @@ const ChildishExtracurricularActivities: React.FC = () => {
             title: 'Ballet',
             description: `O benefício emocional é um dos mais importantes pontos desta atividade, a dança é uma forma de expressão que ajuda a criança explorar os seus sentimentos, além de adquirir maior autoconfiança. Ajuda a desenvolver habilidades sociais como a tolerância e apreço pelos outros.`
         },
-        {
-            image: KidsImg,
-            title: 'Ballet/Hapikido',
-            description: `O Colégio Papa Mike Kids entende que as danças e artes marciais na fase da educação infantil aprendem as noções de espaço, sequencia, padronização e uma conscientização do próprio corpo no emocional, social, estímulos e estímulos.`
-        }
     ]
 
     return (

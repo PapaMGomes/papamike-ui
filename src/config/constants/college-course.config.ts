@@ -30,7 +30,7 @@ const GRADUATION: ICollegeCourse[] = [
     { name: 'Geografia', category: graduation },
     { name: 'História', category: graduation },
     { name: 'Letras - Português', category: graduation },
-    { name: 'Letras - Português e EspanhoL', category: graduation },
+    { name: 'Letras - Português e Espanhol', category: graduation },
     { name: 'Letras - Português e Inglês', category: graduation },
     { name: 'Matemática', category: graduation },
     { name: 'Pedagogia', category: graduation },

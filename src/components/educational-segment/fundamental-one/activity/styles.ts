@@ -1,8 +1,7 @@
 import { AppContainer } from '@/styles/css/ts/components'
-import { ContainerBlob } from '../styles'
 import styled from 'styled-components'
-import tw from 'twin.macro'
 import { rgba } from 'polished'
+import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
     ${tw`mb-12`}
@@ -14,14 +13,14 @@ export const Title = styled.p`
 `
 
 export const Content = styled.article`
-    ${tw`grid gap-8 grid-cols-4 sm:flex flex-col`}
+    ${tw`grid gap-8 grid-cols-4 md:grid-cols-2 md:w-full sm:flex flex-col`}
 `
 
 interface CardProps {
     image?: string
 }
 export const Card = styled.div<CardProps>`
-    ${tw`sm:min-w-[86vw] `}
+    ${tw`sm:min-w-[86vw]`}
     ${tw`w-64 h-40 rounded-2xl shadow-md flex flex-col justify-end items-center transition-all duration-500`}
 
     background-size: cover;

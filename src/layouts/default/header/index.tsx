@@ -12,20 +12,18 @@ import {
     Image,
     Button,
     Article,
-    ImageIcon
+    ImageIcon,
+    ImageText,
 } from './styles'
-import AppHamburguerButton from '@/components/common/app-hamburguer-button'
 import { GiTeacher } from 'react-icons/gi'
 import { FaUserAstronaut } from 'react-icons/fa'
+import AppHamburguerButton from '@/components/common/app-hamburguer-button'
 
 const HeaderDefault: React.FC = () => {
     const { push: navigate } = useRouter()
     const [isShowSideMenu, setIsShowSideMenu] = useState(false)
     const items: IMenuItem[] = [
-        {
-            name: 'Quem Somos',
-            action: () => goTo('/')
-        },
+        { name: 'Quem Somos', action: () => goTo('/') },
         {
             name: 'Segmentos educacionais',
             child: [
@@ -150,11 +148,11 @@ const HeaderDefault: React.FC = () => {
                     child: [
                         {
                             name: 'Enfermagem',
-                            action: () => goTo('/course/free-course')
+                            action: () => goTo('/course/free-course/nursing')
                         },
                         {
                             name: 'Estética',
-                            action: () => goTo('/course/free-course')
+                            action: () => goTo('/course/free-course/aesthetics')
                         }
                     ]
                 }
@@ -185,6 +183,7 @@ const HeaderDefault: React.FC = () => {
             <Container>
                 <ImageContainer onClick={() => navigate('/')}>
                     <Image src={Logo} alt="Papa Mike" />
+                    <ImageText>Educando e Formando Vencedores!</ImageText>
                 </ImageContainer>
 
                 <Article>

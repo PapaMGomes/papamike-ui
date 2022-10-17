@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 export const Container = styled(AppContainer)``
 
 export const Title = styled.p`
-    ${tw`mb-4 font-bold text-lg cursor-default sm:text-center`}
+    ${tw`mb-4 font-bold text-lg cursor-default`}
     color: ${({ theme }) => theme.colors.primary};
 `
 
@@ -14,11 +14,11 @@ export const Text = styled.p`
 `
 
 export const ItemsContainer = styled.article`
-    ${tw`mt-8 grid gap-8 grid-cols-5 sm:grid-cols-2`}
+    ${tw`mt-8 grid gap-8 grid-cols-5 md:grid-cols-2`}
 `
 
 export const Card = styled.div`
-    ${tw`p-4 py-6 rounded-3xl flex flex-col items-center  transition-all duration-700`}
+    ${tw`p-4 py-6 rounded-3xl flex flex-col items-center transition-all duration-700`}
     background: ${({ theme }) => theme.colors.primary};
 
     &:hover {

@@ -28,13 +28,13 @@ export const TextContainer = styled.div`
 `
 
 export const Title = styled.p`
-    ${tw`text-lg w-full transition-all duration-500 sm:text-base`}
+    ${tw`text-lg w-full transition-all duration-500 sm:text-base sm:text-white`}
     color: ${({ theme }) => theme.colors.primary};
     font-weight: 900;
 `
 
 export const Text = styled.p`
-    ${tw`mt-2 w-full`}
+    ${tw`mt-2 w-full sm:text-white`}
     font-weight: 900;
     color: ${({ theme }) => theme.colors.primary};
 `

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Container = styled(AppContainer)`
-    ${tw`my-6 mt-12`}
+    ${tw`my-6`}
 `
 
 export const Content = styled.div`
@@ -11,13 +11,13 @@ export const Content = styled.div`
 `
 
 export const Title = styled.p`
-    ${tw`text-lg font-bold mb-4`}
+    ${tw`text-lg font-bold mb-10 text-center uppercase`}
     color: ${({ theme }) => theme.colors.primary};
 `
 
 export const Card = styled.article`
     ${tw`sm:h-20`}
-    ${tw`p-4 mr-14 w-32 h-32 rounded-3xl shadow flex items-center justify-center cursor-pointer transition-all duration-500`}
+    ${tw`p-4 mr-14 w-36 h-36 rounded-3xl shadow flex flex-col items-center justify-center cursor-pointer transition-all duration-500`}
     background: ${({ theme }) => theme.colors.primary};
 
     &:last-of-type {
@@ -27,10 +27,20 @@ export const Card = styled.article`
     &:hover {
         transform: scale(0.94);
 
-        > i {
+        > i,
+        > b {
             color: ${({ theme }) => theme.colors.yellow};
         }
     }
+`
+
+export const Image = styled.img`
+    ${tw`w-full mt-3`}
+`
+
+export const CardTitle = styled.b`
+    ${tw`mt-2 uppercase`}
+    color: ${({ theme }) => theme.colors.bgPrimary};
 `
 
 export const Icon = styled.i`

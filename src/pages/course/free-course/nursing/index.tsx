@@ -10,6 +10,7 @@ import FirstAid from '@/assets/images/free-courses/nursing/first-aid.jpg'
 import VenousPuncture from '@/assets/images/free-courses/nursing/venous-puncture.jpg'
 import BloodCollection from '@/assets/images/free-courses/nursing/blood-collection.jpg'
 import CalculAtemedicine from '@/assets/images/free-courses/nursing/calculate-medicine.jpg'
+import { WHATSAPP_CONTACT_FREE_COURSE } from '@/config/constants/whatsapp.config'
 
 const Nursing: React.FC = () => {
     const whatsAppService = new WhatsAppService()
@@ -23,10 +24,8 @@ const Nursing: React.FC = () => {
     ]
 
     const onSelect = (course: IFreeCourse) => {
-        const num = '5511940274154'
         const msg = `Olá! Gostaria de saber mais sobre o curso livre de ${course.title}`
-
-        whatsAppService.sendMessage(num, msg)
+        whatsAppService.sendMessage(WHATSAPP_CONTACT_FREE_COURSE, msg)
     }
 
     return (

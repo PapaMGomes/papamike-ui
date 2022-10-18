@@ -10,6 +10,7 @@ import Skincare from '@/assets/images/free-courses/aesthetics/skincare.jpg'
 import HydraLips from '@/assets/images/free-courses/aesthetics/hydra-lips.jpg'
 import BodyDrainage from '@/assets/images/free-courses/aesthetics/body-drainage.jpg'
 import FaceDrainage from '@/assets/images/free-courses/aesthetics/face-drainage.png'
+import { WHATSAPP_CONTACT_FREE_COURSE } from '@/config/constants/whatsapp.config'
 
 const Aesthetics: React.FC = () => {
     const whatsAppService = new WhatsAppService()
@@ -23,10 +24,8 @@ const Aesthetics: React.FC = () => {
     ]
 
     const onSelect = (course: IFreeCourse) => {
-        const num = '5511940274154'
         const msg = `Olá! Gostaria de saber mais sobre o curso livre de *${course.title}*`
-
-        whatsAppService.sendMessage(num, msg)
+        whatsAppService.sendMessage(WHATSAPP_CONTACT_FREE_COURSE, msg)
     }
 
     return (

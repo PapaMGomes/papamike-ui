@@ -9,6 +9,7 @@ import { AlertService } from '@/service/_alert.service'
 import { IContact } from '@/interfaces/contact.interface'
 import PandaContact from '@/assets/images/panda-contact.jpg'
 import { TemplateEmailModel } from '@/models/email/template-email.model'
+import { RECIPIENT_CONTACT } from '@/config/constants/email.config'
 import {
     ImageContainer,
     FormContainer,
@@ -26,7 +27,6 @@ import {
     Span,
     Button
 } from './styles'
-import { RECIPIENT_CONTACT } from '@/config/constants/email.config'
 
 const ContactForm: React.FC = () => {
     const emailService = new EmailService()

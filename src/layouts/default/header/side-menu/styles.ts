@@ -52,7 +52,7 @@ export const Container = styled(AppContainer)`
 `
 
 export const Nav = styled(AppContainer).attrs(fadeIn.right)`
-    ${tw`py-0 w-full flex items-center justify-between fixed top-0 left-0 z-10`}
+    ${tw`py-0 w-full flex items-center justify-between fixed top-0 left-0 z-10 sm:h-24`}
     height: ${({ theme }) => theme.spacing.headerHeight};
     background: ${({ theme }) => theme.colors.primary};
     animation-delay: 900ms;
@@ -76,6 +76,6 @@ export const Button = styled(AppButton)`
 `
 
 export const Content = styled.article.attrs(fadeIn.right)`
-    ${tw`flex flex-col mt-24`}
+    ${tw`flex flex-col mt-32`}
     animation-delay: 900ms;
 `

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, ImageSlide } from './styles'
 import WavesContainer from '@/components/common/waves-container'
 import ScrollAnimation from '@/components/common/scroll-animation'
@@ -12,8 +12,11 @@ import Carousel, {
     SlideContainer,
     ImageContainer
 } from '@/components/common/carousel'
+import AppFullImage from '@/components/common/app-full-image'
 
 const NursingTechnicianGallery: React.FC = () => {
+    const [currentImage, setCurrentImage] = useState('')
+
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
@@ -27,21 +30,34 @@ const NursingTechnicianGallery: React.FC = () => {
     ]
 
     return (
-        <ScrollAnimation animation="fadeInUp">
-            <WavesContainer>
-                <Container>
-                    <Carousel options={carouselOptions}>
-                        {images.map((image, index) => (
-                            <SlideContainer key={index}>
-                                <ImageContainer id={index}>
-                                    <ImageSlide src={image} />
-                                </ImageContainer>
-                            </SlideContainer>
-                        ))}
-                    </Carousel>
-                </Container>
-            </WavesContainer>
-        </ScrollAnimation>
+        <>
+            <ScrollAnimation animation="fadeInUp">
+                <WavesContainer>
+                    <Container>
+                        <Carousel options={carouselOptions}>
+                            {images.map((image, index) => (
+                                <SlideContainer key={index}>
+                                    <ImageContainer id={index}>
+                                        <ImageSlide
+                                            src={image}
+                                            onClick={() =>
+                                                setCurrentImage(image)
+                                            }
+                                        />
+                                    </ImageContainer>
+                                </SlideContainer>
+                            ))}
+                        </Carousel>
+                    </Container>
+                </WavesContainer>
+            </ScrollAnimation>
+
+            <AppFullImage
+                image={currentImage}
+                isOpen={!!currentImage}
+                onBackdropClick={() => setCurrentImage('')}
+            />
+        </>
     )
 }
 

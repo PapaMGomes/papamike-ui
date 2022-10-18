@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdClose } from 'react-icons/md'
 import { IUnit } from '@/interfaces/unit.interface'
 import WavesContainer from '@/components/common/waves-container'
@@ -9,12 +9,14 @@ import Carousel, {
     OptionType,
     ImageContainer
 } from '@/components/common/carousel'
+import AppFullImage from '@/components/common/app-full-image'
 
 interface UnitDetailProps {
     item: IUnit
     onClose?: () => void
 }
 const UnitDetail: React.FC<UnitDetailProps> = props => {
+    const [currentImage, setCurrentImage] = useState('')
     const { item, onClose } = props
 
     const handleClose = () => {
@@ -29,28 +31,41 @@ const UnitDetail: React.FC<UnitDetailProps> = props => {
 
     if (!item.name) return <></>
     return (
-        <ScrollAnimation id="unit-detail" animation="fadeInUp">
-            <WavesContainer>
-                <Container>
-                    <Title>
-                        {item.name}
-                        <Button onClick={handleClose}>
-                            <MdClose />
-                        </Button>
-                    </Title>
+        <>
+            <ScrollAnimation id="unit-detail" animation="fadeInUp">
+                <WavesContainer>
+                    <Container>
+                        <Title>
+                            {item.name}
+                            <Button onClick={handleClose}>
+                                <MdClose />
+                            </Button>
+                        </Title>
 
-                    <Carousel options={carouselOptions}>
-                        {item.slidesImage.map((image, index) => (
-                            <SlideContainer key={index}>
-                                <ImageContainer id={index}>
-                                    <ImageSlide src={image} />
-                                </ImageContainer>
-                            </SlideContainer>
-                        ))}
-                    </Carousel>
-                </Container>
-            </WavesContainer>
-        </ScrollAnimation>
+                        <Carousel options={carouselOptions}>
+                            {item.slidesImage.map((image, index) => (
+                                <SlideContainer key={index}>
+                                    <ImageContainer id={index}>
+                                        <ImageSlide
+                                            src={image}
+                                            onClick={() =>
+                                                setCurrentImage(image)
+                                            }
+                                        />
+                                    </ImageContainer>
+                                </SlideContainer>
+                            ))}
+                        </Carousel>
+                    </Container>
+                </WavesContainer>
+            </ScrollAnimation>
+
+            <AppFullImage
+                image={currentImage}
+                isOpen={!!currentImage}
+                onBackdropClick={() => setCurrentImage('')}
+            />
+        </>
     )
 }
 

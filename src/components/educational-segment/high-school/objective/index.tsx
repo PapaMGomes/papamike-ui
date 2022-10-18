@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import WavesContainer from '@/components/common/waves-container'
 import ScrollAnimation from '@/components/common/scroll-animation'
 import { HIGH_SCHOOL_IMAGES } from '@/config/gallery/high-school.gallery'
@@ -9,8 +9,10 @@ import Carousel, {
     OptionType,
     SlideContainer
 } from '@/components/common/carousel'
+import AppFullImage from '@/components/common/app-full-image'
 
 const HighSchoolObjective: React.FC = () => {
+    const [currentImage, setCurrentImage] = useState('')
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
@@ -55,7 +57,12 @@ const HighSchoolObjective: React.FC = () => {
                             {HIGH_SCHOOL_IMAGES.map((image, index) => (
                                 <SlideContainer key={index}>
                                     <ImageContainer id={index}>
-                                        <ImageSlide src={image} />
+                                        <ImageSlide
+                                            src={image}
+                                            onClick={() =>
+                                                setCurrentImage(image)
+                                            }
+                                        />
                                     </ImageContainer>
                                 </SlideContainer>
                             ))}
@@ -63,6 +70,12 @@ const HighSchoolObjective: React.FC = () => {
                     </GalleryContainer>
                 </WavesContainer>
             </ScrollAnimation>
+
+            <AppFullImage
+                image={currentImage}
+                isOpen={!!currentImage}
+                onBackdropClick={() => setCurrentImage('')}
+            />
         </>
     )
 }

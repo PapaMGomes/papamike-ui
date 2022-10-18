@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import WavesContainer from '@/components/common/waves-container'
 import ScrollAnimation from '@/components/common/scroll-animation'
 import { Container, GalleryContainer, Title, Text, ImageSlide } from './styles'
@@ -9,8 +9,10 @@ import Carousel, {
     OptionType,
     SlideContainer
 } from '@/components/common/carousel'
+import AppFullImage from '@/components/common/app-full-image'
 
 const FundamentalTwoObjective: React.FC = () => {
+    const [currentImage, setCurrentImage] = useState('')
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
@@ -56,7 +58,12 @@ const FundamentalTwoObjective: React.FC = () => {
                             {FUNDAMENTAL_TWO_IMAGES.map((image, index) => (
                                 <SlideContainer key={index}>
                                     <ImageContainer id={index}>
-                                        <ImageSlide src={image} />
+                                        <ImageSlide
+                                            src={image}
+                                            onClick={() =>
+                                                setCurrentImage(image)
+                                            }
+                                        />
                                     </ImageContainer>
                                 </SlideContainer>
                             ))}
@@ -64,6 +71,12 @@ const FundamentalTwoObjective: React.FC = () => {
                     </GalleryContainer>
                 </WavesContainer>
             </ScrollAnimation>
+
+            <AppFullImage
+                image={currentImage}
+                isOpen={!!currentImage}
+                onBackdropClick={() => setCurrentImage('')}
+            />
         </>
     )
 }

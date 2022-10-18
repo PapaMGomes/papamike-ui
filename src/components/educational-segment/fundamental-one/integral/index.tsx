@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
     Card,
     Text,
@@ -19,8 +19,10 @@ import ScrollAnimation from '@/components/common/scroll-animation'
 import WavesContainer from '@/components/common/waves-container'
 import { FUNDAMENTAL_ONE_INTEGRAL_IMAGES } from '@/config/gallery/funtamental-one.gallery'
 import { ContainerHeaven } from '../styles'
+import AppFullImage from '@/components/common/app-full-image'
 
 const FundamentalOneIntegral: React.FC = () => {
+    const [currentImage, setCurrentImage] = useState('')
     const carouselOptions: OptionType = {
         type: 'loop',
         autoplay: true,
@@ -42,50 +44,64 @@ const FundamentalOneIntegral: React.FC = () => {
     ]
 
     return (
-        <ContainerHeaven>
-            <Container>
-                <Title>Integral</Title>
+        <>
+            <ContainerHeaven>
+                <Container>
+                    <Title>Integral</Title>
 
-                <Text>
-                    Esse modelo pode ser aderido pelas famílias por diversos
-                    motivos e tem alguns benefícios aos alunos. Passar o dia na
-                    escola traz às crianças novas vivências, aprendizados e
-                    socialização.
-                </Text>
-                <Text>
-                    Durante a permanência no Colégio, os alunos recebem almoço e
-                    dois lanches e participam de atividades recreativas,
-                    oficinas, circuitos e do brincar livre e dirigido.
-                </Text>
+                    <Text>
+                        Esse modelo pode ser aderido pelas famílias por diversos
+                        motivos e tem alguns benefícios aos alunos. Passar o dia
+                        na escola traz às crianças novas vivências, aprendizados
+                        e socialização.
+                    </Text>
+                    <Text>
+                        Durante a permanência no Colégio, os alunos recebem
+                        almoço e dois lanches e participam de atividades
+                        recreativas, oficinas, circuitos e do brincar livre e
+                        dirigido.
+                    </Text>
 
-                <Title>Nossos alunos contam com:</Title>
-                <ItemsContainer>
-                    {items.map((item, index) => (
-                        <Card key={index}>
-                            <CardText>{item}</CardText>
-                        </Card>
-                    ))}
-                </ItemsContainer>
-            </Container>
+                    <Title>Nossos alunos contam com:</Title>
+                    <ItemsContainer>
+                        {items.map((item, index) => (
+                            <Card key={index}>
+                                <CardText>{item}</CardText>
+                            </Card>
+                        ))}
+                    </ItemsContainer>
+                </Container>
 
-            <ScrollAnimation animation="fadeInUp">
-                <WavesContainer>
-                    <GalleryContainer>
-                        <Carousel options={carouselOptions}>
-                            {FUNDAMENTAL_ONE_INTEGRAL_IMAGES.map(
-                                (image, index) => (
-                                    <SlideContainer key={index}>
-                                        <ImageContainer id={index}>
-                                            <ImageSlide src={image} />
-                                        </ImageContainer>
-                                    </SlideContainer>
-                                )
-                            )}
-                        </Carousel>
-                    </GalleryContainer>
-                </WavesContainer>
-            </ScrollAnimation>
-        </ContainerHeaven>
+                <ScrollAnimation animation="fadeInUp">
+                    <WavesContainer>
+                        <GalleryContainer>
+                            <Carousel options={carouselOptions}>
+                                {FUNDAMENTAL_ONE_INTEGRAL_IMAGES.map(
+                                    (image, index) => (
+                                        <SlideContainer key={index}>
+                                            <ImageContainer id={index}>
+                                                <ImageSlide
+                                                    src={image}
+                                                    onClick={() =>
+                                                        setCurrentImage(image)
+                                                    }
+                                                />
+                                            </ImageContainer>
+                                        </SlideContainer>
+                                    )
+                                )}
+                            </Carousel>
+                        </GalleryContainer>
+                    </WavesContainer>
+                </ScrollAnimation>
+            </ContainerHeaven>
+
+            <AppFullImage
+                image={currentImage}
+                isOpen={!!currentImage}
+                onBackdropClick={() => setCurrentImage('')}
+            />
+        </>
     )
 }
 

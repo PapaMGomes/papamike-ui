@@ -16,7 +16,7 @@ export const Title = styled.p`
 `
 
 export const Card = styled.article`
-    ${tw`sm:h-20`}
+    ${tw`sm:h-28 sm:w-[30%] sm:mr-3`}
     ${tw`p-4 mr-14 w-36 h-36 rounded-3xl shadow flex flex-col items-center justify-center cursor-pointer transition-all duration-500`}
     background: ${({ theme }) => theme.colors.primary};
 
@@ -26,11 +26,8 @@ export const Card = styled.article`
 
     &:hover {
         transform: scale(0.94);
-
-        > i,
-        > b {
-            color: ${({ theme }) => theme.colors.yellow};
-        }
+        border: 8px solid ${({ theme }) => theme.colors.yellow};
+        outline: 8px solid ${({ theme }) => theme.colors.primary};
     }
 `
 

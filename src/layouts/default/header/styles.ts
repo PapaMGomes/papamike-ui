@@ -22,11 +22,11 @@ export const ImageContainer = styled.figure`
 `
 
 export const Image = styled.img.attrs(fadeIn.left)`
-    ${tw`sm:w-20 sm:h-12 cursor-pointer`}
+    ${tw`sm:w-24 sm:h-14 cursor-pointer`}
 `
 
 export const ImageText = styled.p`
-    ${tw`text-[70%] font-extrabold uppercase md:hidden`}
+    ${tw`mt-2 text-[70%] font-extrabold uppercase md:hidden`}
     color: ${({ theme }) => theme.colors.primary};
 `
 

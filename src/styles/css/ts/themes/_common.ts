@@ -12,8 +12,8 @@ const common = {
         graySecondary: '#d7d7d7'
     },
     spacing: {
-        headerHeight: '9.125rem',
-        menuHeight: '3.5rem'
+        menuHeight: '3.5rem',
+        headerHeight: '9.325rem'
     }
 }
 

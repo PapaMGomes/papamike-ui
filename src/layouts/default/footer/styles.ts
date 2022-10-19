@@ -12,11 +12,19 @@ export const Container = styled(AppContainer)`
 `
 
 export const Content = styled.section`
-    ${tw`flex items-center sm:flex-col`}
+    ${tw`flex items-center justify-between sm:flex-col`}
+`
+
+export const Article = styled.article`
+    ${tw`flex flex-col items-center`}
+
+    &:first-of-type {
+        ${tw`grid gap-x-4 grid-cols-2 sm:gap-0 sm:grid-cols-1`}
+    }
 `
 
 export const Image = styled.img`
-    ${tw`w-44 mb-2 sm:w-20 sm:h-12 ml-auto sm:hidden`}
+    ${tw`w-44 mb-2 sm:w-20 sm:h-12 sm:hidden`}
 `
 
 export const Text = styled.p`
@@ -24,7 +32,15 @@ export const Text = styled.p`
 `
 
 export const Link = styled.a`
-    ${tw`text-sm mb-1 cursor-pointer`}
+    ${tw`mb-2 cursor-pointer flex items-center`}
+
+    > svg {
+        ${tw`mr-3`}
+    }
+
+    &:last-of-type {
+        ${tw`mb-0`}
+    }
 `
 
 export const Span = styled.span`
@@ -33,20 +49,25 @@ export const Span = styled.span`
 `
 
 export const ItemsContainer = styled.article`
-    ${tw`flex flex-col mr-8 sm:flex-row sm:w-full sm:justify-center sm:mb-8 sm:mr-0`}
+    ${tw`mb-8 flex sm:mt-8`}
 `
 
 export const Strong = styled.strong`
-    ${tw`mb-2 uppercase`}
+    ${tw`mb-2 uppercase sm:text-center`}
 `
 
 export const ContactContainer = styled.div`
-    ${tw`pb-2 flex flex-col justify-between sm:w-full sm:items-center`}
+    ${tw`py-3 flex flex-col justify-between sm:w-full w-full`}
+    border-bottom: 1px solid;
+
+    &:nth-child(3),
+    &:last-of-type {
+        border-bottom: none;
+    }
 `
 
 export const Icon = styled.i`
-    ${tw`sm:mt-0 sm:ml-4 sm:w-14 sm:h-14`}
-    ${tw`w-10 h-10 mt-2 text-lg rounded-full flex items-center justify-center cursor-pointer transition-transform duration-700`}
+    ${tw`w-10 h-10 mr-4 text-lg rounded-full flex items-center justify-center cursor-pointer transition-transform duration-700`}
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.bgPrimary};
 
@@ -54,7 +75,7 @@ export const Icon = styled.i`
         transform: scale(1.2);
     }
 
-    &:first-of-type {
-        ${tw`mt-0 sm:ml-0`}
+    &:last-of-type {
+        ${tw`mr-0`}
     }
 `

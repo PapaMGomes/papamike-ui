@@ -12,7 +12,7 @@ export const Container = styled.section.attrs(fadeIn.right)`
 `
 
 export const Nav = styled(AppContainer)`
-    ${tw`h-full flex list-none py-0 pl-12 rounded-bl-3xl`}
+    ${tw`h-full flex list-none py-0 pl-12 rounded-l-full`}
     background: ${({ theme }) => theme.colors.primary};
 `
 

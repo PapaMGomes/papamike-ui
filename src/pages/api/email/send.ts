@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 import NextCors from 'nextjs-cors'
 
-type ResponseData = { message: string }
+type ResponseData = { message: string; error?: any }
 
 export default async function handler(
     req: NextApiRequest,
@@ -21,6 +21,9 @@ export default async function handler(
 
         res.status(200).json({ message: 'Email enviado com sucesso' })
     } catch (error) {
-        res.status(400).json({ message: 'Ocorreu um erro ao enviar email' })
+        res.status(400).json({
+            message: 'Ocorreu um erro ao enviar email',
+            error
+        })
     }
 }

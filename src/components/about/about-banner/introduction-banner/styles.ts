@@ -24,20 +24,21 @@ export const Card = styled.article`
     }
 
     &:hover {
-        > p {
-            ${tw`text-[1.4rem]`}
+        > p,
+        > div {
+            transform: scale(0.96);
         }
     }
 `
 
 export const Title = styled.p`
-    ${tw`text-lg font-bold w-3/4 transition-all duration-500 sm:text-[1.3rem]`}
+    ${tw`text-lg font-bold w-[68%] text-left transition-all duration-500 sm:text-[1.3rem]`}
 `
 
 export const ImageContainer = styled.div`
-    ${tw`flex items-center`}
+    ${tw`flex items-center justify-end w-full transition-all duration-500`}
 `
 
 export const Image = styled.img`
-    ${tw`ml-4 w-48 sm:w-12`}
+    ${tw`ml-4 w-52 sm:w-12`}
 `

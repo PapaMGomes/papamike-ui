@@ -39,5 +39,5 @@ export const ImageContainer = styled.div`
 `
 
 export const Image = styled.img`
-    ${tw`ml-4 w-32 sm:w-12`}
+    ${tw`ml-4 w-48 sm:w-12`}
 `

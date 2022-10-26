@@ -7,7 +7,7 @@ const IntroductionBanner: React.FC = () => {
     return (
         <Card>
             <Title>
-                Fazemos parte da vida e dos sonhos dos nossos alunos para que
+                Fazemos parte da vida e dos sonhos dos nossos alunos, para que
                 tenham um futuro melhor!
             </Title>
 

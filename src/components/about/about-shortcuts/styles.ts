@@ -9,7 +9,7 @@ export const Container = styled(AppContainer).attrs(fadeIn.default)`
 `
 
 export const Card = styled.article`
-    ${tw`p-4 uppercase flex flex-col items-center justify-center font-bold rounded-xl cursor-pointer transition-all duration-700 sm:text-[80%]`}
+    ${tw`p-4 uppercase flex flex-col items-center justify-center font-bold rounded-xl cursor-pointer transition-all duration-700 sm:text-[66%]`}
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.bgPrimary};
     background-image: ${() => `url(${BubbleBG})`};

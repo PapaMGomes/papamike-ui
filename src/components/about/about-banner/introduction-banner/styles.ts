@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Card = styled.article`
-    ${tw`p-10 rounded-3xl h-64 shadow-md flex items-center sm:flex-col`}
+    ${tw`p-10 rounded-3xl h-64 shadow-md flex items-center sm:flex-col sm:justify-between`}
 
     background-image: ${() => `url(${BubbleBG})`};
     color: ${({ theme }) => theme.colors.bgPrimary};
@@ -32,11 +32,11 @@ export const Card = styled.article`
 `
 
 export const Title = styled.p`
-    ${tw`text-lg font-bold w-[68%] text-left transition-all duration-500 sm:text-[1.3rem]`}
+    ${tw`text-lg font-bold w-[68%] text-left transition-all duration-500 sm:w-full sm:text-center sm:text-[1.3rem]`}
 `
 
 export const ImageContainer = styled.div`
-    ${tw`flex items-center justify-end w-full transition-all duration-500`}
+    ${tw`flex items-center justify-end w-full transition-all duration-500 sm:justify-center`}
 `
 
 export const Image = styled.img`

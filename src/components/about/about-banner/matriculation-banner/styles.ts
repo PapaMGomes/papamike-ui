@@ -6,7 +6,7 @@ import tw from 'twin.macro'
 
 export const Card = styled.article`
     ${tw`p-10 rounded-3xl h-64 shadow-md`}
-    ${tw`sm:flex flex-col sm:shadow-[inset 0 0 0 2000px #00000057}]`}
+    ${tw`sm:flex flex-col justify-center sm:h-[42vh] sm:shadow-[inset 0 0 0 2000px #00000057}]`}
 
     background: ${() => `
         url(${StudentImage}) right top  no-repeat,

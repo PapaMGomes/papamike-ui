@@ -9,7 +9,7 @@ const WhatsappButton: React.FC = () => {
     const handleClick = () => whatsAppService.sendMessage(WHATSAPP_CONTACT, '')
 
     return (
-        <Button onClick={handleClick}>
+        <Button onClick={handleClick} id="whatsapp_button">
             <BsWhatsapp />
         </Button>
     )

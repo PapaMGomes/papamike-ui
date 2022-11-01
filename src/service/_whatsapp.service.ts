@@ -1,5 +1,8 @@
 export class WhatsAppService {
     sendMessage(phone: string, message: string) {
-        window.open(`https://wa.me/${phone}?text=${message}`, '_blank')
+        window.open(
+            `http://api.whatsapp.com/send?phone=${phone}&text=${message}`,
+            '_blank'
+        )
     }
 }

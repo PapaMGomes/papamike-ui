@@ -5,8 +5,8 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Card = styled.article`
-    ${tw`p-10 rounded-3xl h-64 shadow-md`}
-    ${tw`sm:flex flex-col justify-center sm:h-[42vh] sm:shadow-[inset 0 0 0 2000px #00000057}]`}
+    ${tw`p-10 rounded-3xl h-64 shadow-md relative`}
+    ${tw`md:flex-col flex justify-center md:h-[42vh] md:shadow-[inset 0 0 0 2000px #00000057}]`}
 
     background: ${() => `
         url(${StudentImage}) right top  no-repeat,
@@ -23,27 +23,32 @@ export const Card = styled.article`
     }
 `
 
+export const TitleContainer = styled.article`
+    ${tw`w-64 flex flex-col absolute left-[14%] top-[24%] md:w-auto md:relative md:left-auto md:top-auto`}
+`
+
 export const TextContainer = styled.div`
     ${tw`flex flex-col justify-start`}
 `
 
 export const Title = styled.p`
-    ${tw`text-lg w-full transition-all duration-500 sm:text-base sm:text-white`}
+    ${tw`text-xl text-center w-full transition-all duration-500 md:text-base md:text-white`}
+    text-shadow: 1px 1px 2px ${({ theme }) => theme.colors.yellow};
     color: ${({ theme }) => theme.colors.primary};
     font-weight: 900;
 `
 
 export const Text = styled.p`
-    ${tw`mt-2 w-full sm:text-white`}
+    ${tw`mt-2 w-full md:text-white`}
     font-weight: 900;
     color: ${({ theme }) => theme.colors.primary};
 `
 
 export const Article = styled.article`
-    ${tw`flex flex-col justify-center items-center relative`}
+    ${tw`pl-20 flex flex-col justify-center items-center relative md:pl-0`}
 `
 
 export const Button = styled(AppButton)`
-    ${tw`px-8 mt-4 uppercase w-64`}
+    ${tw`px-8 mt-8 uppercase w-64`}
     font-weight: 900;
 `

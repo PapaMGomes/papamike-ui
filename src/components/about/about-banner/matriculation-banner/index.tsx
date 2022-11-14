@@ -1,6 +1,14 @@
 import React from 'react'
 import { WhatsAppService } from '@/service/_whatsapp.service'
-import { Card, Article, Title, Text, Button, TextContainer } from './styles'
+import {
+    Card,
+    Article,
+    Title,
+    Text,
+    Button,
+    TextContainer,
+    TitleContainer
+} from './styles'
 import { WHATSAPP_CONTACT_MATRICULATION } from '@/config/constants/whatsapp.config'
 
 const MatriculationBanner: React.FC = () => {
@@ -13,9 +21,12 @@ const MatriculationBanner: React.FC = () => {
 
     return (
         <Card>
+            <TitleContainer>
+                <Title>MATRÍCULAS ABERTAS 2023</Title>
+            </TitleContainer>
+
             <Article>
                 <TextContainer>
-                    <Title>MATRÍCULAS ABERTAS 2023</Title>
                     <Text>Venha conhecer nosso Colégio!</Text>
                     <Text>Apresentação Pedagógica Institucional</Text>
                 </TextContainer>

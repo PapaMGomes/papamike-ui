@@ -1,5 +1,5 @@
-import React from 'react'
 import { Container } from './styles'
+import React, { useState } from 'react'
 import IntroductionBanner from './introduction-banner'
 import MatriculationBanner from './matriculation-banner'
 import Carousel, {
@@ -8,22 +8,31 @@ import Carousel, {
 } from '@/components/common/carousel'
 
 const AboutBanner: React.FC = () => {
-    const options: OptionType = {
+    const [options, setOptions] = useState<OptionType>({
         type: 'loop',
         gap: 10,
         arrows: false,
         autoplay: true,
-        interval: 10000
-    }
+        interval: 5000
+    })
 
     const data = [
-        // <IntroductionBanner key="IntroductionBanner" />,
+        <IntroductionBanner key="IntroductionBanner" />,
         <MatriculationBanner key="MatriculationBanner" />
     ]
 
+    const onSlideChange = (e: any) => {
+        const [{ index }] = e
+        const setSlideInterval = (interval: number) =>
+            setOptions({ ...options, interval })
+
+        if (index === 0) setSlideInterval(10000)
+        else if (index === 1) setSlideInterval(5000)
+    }
+
     return (
         <Container paddingTop>
-            <Carousel padding="0" options={options}>
+            <Carousel padding="0" options={options} onMoved={onSlideChange}>
                 {data.map((item, index) => (
                     <SlideContainer key={index}>{item}</SlideContainer>
                 ))}

@@ -13,6 +13,7 @@ interface CarouselProps {
     padding?: string
     options?: OptionType
     children: React.ReactNode
+    onMoved?: (arg: any) => void
     perPageResponsive?: IResponsiveItemsPerPage
 }
 interface SlideContainerProps {
@@ -28,7 +29,7 @@ const SlideContainer: React.FC<SlideContainerProps> = ({ children }) => {
 }
 
 const Carousel: React.FC<CarouselProps> = props => {
-    const { options, children, padding } = props
+    const { options, children, padding, onMoved } = props
     const [splideOptions, setSplideOptions] = useState<Options>({})
     const perPage = useResponsivePerPage(options?.custom?.perPageResponsive)
 
@@ -59,7 +60,10 @@ const Carousel: React.FC<CarouselProps> = props => {
 
     return (
         <Container padding={padding}>
-            <Splide options={{ ...options, ...splideOptions }}>
+            <Splide
+                options={{ ...options, ...splideOptions }}
+                onMoved={(...arg) => onMoved && onMoved(arg)}
+            >
                 {children}
             </Splide>
         </Container>

@@ -8,13 +8,18 @@ export const Card = styled.article`
     ${tw`p-10 rounded-3xl h-64 shadow-md relative`}
     ${tw`md:flex-col flex justify-center md:h-[42vh] md:shadow-[inset 0 0 0 2000px #00000057}]`}
 
-    background: ${() => `
+    background: ${({ theme }) => `
         url(${StudentImage}) right top  no-repeat,
-        url(${Blob}) left center no-repeat
+        url(${Blob}) left center no-repeat,
+
+        linear-gradient(
+            90deg,
+            ${theme.colors.yellow} 50%,
+            ${theme.colors.primary} 50%
+        )
     `};
 
     color: ${({ theme }) => theme.colors.bgPrimary};
-    background-color: ${({ theme }) => theme.colors.primary};
 
     &:hover {
         > p {
@@ -24,7 +29,7 @@ export const Card = styled.article`
 `
 
 export const TitleContainer = styled.article`
-    ${tw`w-64 flex flex-col absolute left-[14%] top-[24%] md:w-auto md:relative md:left-auto md:top-auto`}
+    ${tw`w-64 flex flex-col absolute left-[8%] top-[24%] md:w-auto md:relative md:left-auto md:top-auto`}
 `
 
 export const TextContainer = styled.div`
@@ -32,10 +37,11 @@ export const TextContainer = styled.div`
 `
 
 export const Title = styled.p`
-    ${tw`text-xl text-center w-full transition-all duration-500 md:text-base md:text-white`}
+    ${tw`text-[2.30rem] text-center w-full transition-all duration-500 md:text-base md:text-white`}
     text-shadow: 1px 1px 2px ${({ theme }) => theme.colors.yellow};
     color: ${({ theme }) => theme.colors.primary};
-    font-weight: 900;
+    font-family: 'montserrat-extra';
+    line-height: 2rem;
 `
 
 export const Text = styled.p`
@@ -45,7 +51,7 @@ export const Text = styled.p`
 `
 
 export const Article = styled.article`
-    ${tw`pl-20 flex flex-col justify-center items-center relative md:pl-0`}
+    ${tw`pl-8 flex flex-col justify-center items-center relative md:pl-0`}
 `
 
 export const Button = styled(AppButton)`

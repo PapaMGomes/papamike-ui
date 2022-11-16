@@ -7,6 +7,14 @@ import { darken, lighten } from 'polished'
 import tw from 'twin.macro'
 
 export default createGlobalStyle`
+  @font-face {
+    font-style: bold;
+    font-weight: 900;
+    font-display: swap;
+    font-family: 'montserrat-extra';
+    src: url('/fonts/Montserrat-ExtraBold.woff') format('woff');
+  }
+
    :root {
     --toastify-color-dark: ${props => props.theme.colors.bgSecondary};
    }

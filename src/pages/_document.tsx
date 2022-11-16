@@ -57,6 +57,13 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                     />
 
+                    <link
+                        rel="preload"
+                        as="font"
+                        crossOrigin=""
+                        type="font/woff"
+                        href="/fonts/Montserrat-ExtraBold.woff"
+                    />
                     <link rel="shortcut icon" href="/ico.png" />
 
                     <script

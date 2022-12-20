@@ -17,8 +17,8 @@ const AboutBanner: React.FC = () => {
     })
 
     const data = [
-        <IntroductionBanner key="IntroductionBanner" />,
-        <MatriculationBanner key="MatriculationBanner" />
+        <MatriculationBanner key="MatriculationBanner" />,
+        <IntroductionBanner key="IntroductionBanner" />
     ]
 
     const onSlideChange = (e: any) => {
@@ -26,8 +26,8 @@ const AboutBanner: React.FC = () => {
         const setSlideInterval = (interval: number) =>
             setOptions({ ...options, interval })
 
-        if (index === 0) setSlideInterval(10000)
-        else if (index === 1) setSlideInterval(5000)
+        if (index === 0) setSlideInterval(5000)
+        else if (index === 1) setSlideInterval(10000)
     }
 
     return (

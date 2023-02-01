@@ -26,7 +26,6 @@ export const Card = styled.div<CardProps>`
     background-size: cover;
     background-position: center;
     background-image: ${({ image }) => `url(${image})`};
-    box-shadow: inset 0 0 0 2000px ${() => rgba('#2e2d2d', 0.4)};
 
     &:hover {
         transform: scale(0.94);
@@ -35,7 +34,7 @@ export const Card = styled.div<CardProps>`
 
 export const CardTitle = styled.p`
     ${tw`w-full py-2 font-extrabold text-center uppercase cursor-default rounded-b-2xl`}
-    color: ${({ theme }) => theme.colors.yellow};
+    color: ${({ theme }) => theme.colors.bgSecondary};
     background: ${({ theme }) => theme.colors.primary};
 `
 
@@ -44,6 +43,6 @@ export const Text = styled.p`
 `
 
 export const Label = styled.p`
-    ${tw`font-bold text-center cursor-default`}
+    ${tw`font-bold text-center cursor-default text-sm`}
     color: ${({ theme }) => theme.colors.bgSecondary};
 `

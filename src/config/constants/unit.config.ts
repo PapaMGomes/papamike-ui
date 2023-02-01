@@ -22,13 +22,5 @@ export const UNITS = [
         link: `https://goo.gl/maps/gJ7W3Z981mTszTASA`,
         address: 'Av. Santo Antônio, 1430 - Vila Osasco, Osasco - SP',
         mapURL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7931205823365!2d-46.78376557596664!3d-23.539942124885382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff0cde662533%3A0x5b0f9238ecd6dffc!2sAv.%20Santo%20Ant%C3%B4nio%2C%201430%20-%20Vila%20Osasco%2C%20Osasco%20-%20SP%2C%2006083-200!5e0!3m2!1spt-BR!2sbr!4v1665524779218!5m2!1spt-BR!2sbr`
-    },
-    {
-        isKids: true,
-        name: 'Kids Mutinga',
-        telephone: '(11) 3603-3976',
-        link: `https://goo.gl/maps/w25U4RJSAph8CB9x9`,
-        address: 'R. Selemita, 202 - Mutinga, Osasco - SP',
-        mapURL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.7817671547346!2d-46.77267368451783!3d-23.504368765376313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefeebd8b5aa23%3A0x10284804d5dbacf5!2sR.%20Selemita%2C%20202%20-%20Mutinga%2C%20Osasco%20-%20SP%2C%2006286-280!5e0!3m2!1spt-BR!2sbr!4v1665524835138!5m2!1spt-BR!2sbr`
     }
 ]

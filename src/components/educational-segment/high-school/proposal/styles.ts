@@ -33,5 +33,5 @@ export const Icon = styled.i`
 
 export const CardText = styled.p`
     ${tw`text-center mt-2 font-bold select-none`}
-    color: ${({ theme }) => theme.colors.yellow};
+    color: ${({ theme }) => theme.colors.bgSecondary};
 `

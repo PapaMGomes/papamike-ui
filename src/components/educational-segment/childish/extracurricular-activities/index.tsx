@@ -23,8 +23,11 @@ const ChildishExtracurricularActivities: React.FC = () => {
     const items = [
         {
             image: CulturaInglesaImg,
-            title: 'Projeto Bilíngue',
-            description: `Propõe a introdução da Língua Inglesa desde a Educação Infantil, com metodologia ativa. O projeto bilíngue permite desenvolver projetos de imersão da língua inglesa, com aulas 3 vezes semanais, dosadas em 40 minutos. A metodologia ativa permite que o aluno se desenvolva através de atividades lúdicas como a músicas, jogos interativos, filmes, conversação, brincadeiras, projetos com datas comemorativas, entre outros.`
+            title: 'Projeto Bilíngue - Cultura Inglesa',
+            description: `Propõe a introdução da Língua Inglesa desde a Educação Infantil, com metodologia ativa. O projeto bilíngue permite desenvolver projetos de imersão da língua inglesa, com aulas 3 vezes semanais, dosadas em 40 minutos. A metodologia ativa permite que o aluno se desenvolva através de atividades lúdicas como a músicas, jogos interativos, filmes, conversação, brincadeiras, projetos com datas comemorativas, entre outros.
+
+            A Plataforma Bilíngue Cultura Inglesa é uma solução intracurricular para as escolas regulares que buscam proporcionar aos seus alunos uma formação bilíngue de verdade, da Educação Infantil ao Ensino Médio. Com ampla oferta de carga horária, conteúdos e recursos, você tem flexibilidade para deixar a Plataforma Bilíngue do jeito que a sua escola precisa, sempre com a excelência de uma metodologia de ensino reconhecida e premiada há mais de 87 anos, alinhada às diretrizes da Base Nacional Comum Curricular e habilidades do século XXI.
+            `
         },
         {
             image: GuitarImg,
@@ -46,7 +49,7 @@ const ChildishExtracurricularActivities: React.FC = () => {
             image: BalletImg,
             title: 'Ballet',
             description: `O benefício emocional é um dos mais importantes pontos desta atividade, a dança é uma forma de expressão que ajuda a criança explorar os seus sentimentos, além de adquirir maior autoconfiança. Ajuda a desenvolver habilidades sociais como a tolerância e apreço pelos outros.`
-        },
+        }
     ]
 
     return (

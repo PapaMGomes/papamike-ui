@@ -37,5 +37,5 @@ export const CardTitle = styled(Title)`
 `
 
 export const Text = styled.p`
-    ${tw`sm:text-center`}
+    ${tw`sm:text-center whitespace-pre-line`}
 `

@@ -7,5 +7,5 @@ export const Container = styled(AppContainer)`
 `
 
 export const ImageSlide = styled.img`
-    ${tw`w-56 h-72 rounded-2xl shadow transition-all duration-500 sm:w-full`}
+    ${tw`max-w-[320px] h-full rounded-2xl shadow transition-all duration-500 sm:w-full`}
 `

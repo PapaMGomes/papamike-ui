@@ -5,7 +5,7 @@ interface ContainerProps {
     padding?: string
 }
 export const Container = styled.section<ContainerProps>`
-    ${tw`w-full`}
+    ${tw`w-full h-full`}
 
     .splide {
         padding: ${({ padding }) => padding} !important;
@@ -13,5 +13,5 @@ export const Container = styled.section<ContainerProps>`
 `
 
 export const Slide = styled.article`
-    ${tw`text-center`}
+    ${tw`text-center h-full`}
 `

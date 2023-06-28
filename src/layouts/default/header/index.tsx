@@ -13,7 +13,7 @@ import {
     Button,
     Article,
     ImageIcon,
-    ImageText,
+    ImageText
 } from './styles'
 import { GiTeacher } from 'react-icons/gi'
 import { FaUserAstronaut } from 'react-icons/fa'
@@ -162,6 +162,10 @@ const HeaderDefault: React.FC = () => {
             name: 'Anhanguera',
             action: () => goTo('/anhanguera'),
             rightSlot: <ImageIcon src={AnhangueraLogo} />
+        },
+        {
+            name: 'Unidades',
+            action: () => goTo('/unit')
         },
         {
             name: 'Contato',

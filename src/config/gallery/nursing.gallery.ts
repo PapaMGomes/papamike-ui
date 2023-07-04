@@ -1,24 +1,3 @@
-import Nursing1 from '@/assets/images/nursing/0001.jpeg'
-import Nursing2 from '@/assets/images/nursing/0002.jpeg'
-import Nursing3 from '@/assets/images/nursing/0003.jpeg'
-import Nursing4 from '@/assets/images/nursing/0004.jpeg'
-import Nursing5 from '@/assets/images/nursing/0005.jpeg'
-import Nursing6 from '@/assets/images/nursing/0006.jpeg'
-import Nursing7 from '@/assets/images/nursing/0007.jpeg'
-import Nursing8 from '@/assets/images/nursing/0008.jpeg'
-import Nursing9 from '@/assets/images/nursing/0009.jpeg'
-import Nursing10 from '@/assets/images/nursing/0010.jpeg'
-import Nursing11 from '@/assets/images/nursing/0011.jpeg'
-import Nursing12 from '@/assets/images/nursing/0012.jpeg'
-import Nursing13 from '@/assets/images/nursing/0013.jpeg'
-import Nursing14 from '@/assets/images/nursing/0014.jpeg'
-import Nursing15 from '@/assets/images/nursing/0015.jpeg'
-import Nursing16 from '@/assets/images/nursing/0016.jpeg'
-import Nursing17 from '@/assets/images/nursing/0017.jpeg'
-import Nursing18 from '@/assets/images/nursing/0018.jpeg'
-import Nursing19 from '@/assets/images/nursing/0019.jpeg'
-import Nursing20 from '@/assets/images/nursing/0020.jpeg'
-
 import Nursing21 from '@/assets/images/nursing/0021.jpg'
 import Nursing22 from '@/assets/images/nursing/0022.jpg'
 import Nursing23 from '@/assets/images/nursing/0023.jpg'
@@ -52,28 +31,7 @@ export const NURSING_IMAGES = [
     Nursing33,
     Nursing34,
     Nursing35,
-    Nursing36,
-
-    Nursing1,
-    Nursing2,
-    Nursing3,
-    Nursing4,
-    Nursing5,
-    Nursing6,
-    Nursing7,
-    Nursing8,
-    Nursing9,
-    Nursing10,
-    Nursing11,
-    Nursing12,
-    Nursing13,
-    Nursing14,
-    Nursing15,
-    Nursing16,
-    Nursing17,
-    Nursing18,
-    Nursing19,
-    Nursing20
+    Nursing36
 ]
 
 import NursingEvent1 from '@/assets/images/nursing/events/0001.jpeg'

@@ -44,11 +44,6 @@ const HeaderDefault: React.FC = () => {
                                 goTo(
                                     '/educational-segment/childish?type=activity'
                                 )
-                        },
-                        {
-                            name: 'Unidades',
-                            action: () =>
-                                goTo('/educational-segment/childish?type=units')
                         }
                     ]
                 },

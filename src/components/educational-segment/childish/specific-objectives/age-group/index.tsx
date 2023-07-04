@@ -10,6 +10,7 @@ import {
     CardSubtitle,
     Content
 } from './styles'
+import ChildishGallery from '../gallery'
 
 const ChildishAgeGroup: React.FC = () => {
     const items = [
@@ -96,6 +97,7 @@ const ChildishAgeGroup: React.FC = () => {
                         </Card>
                     ))}
                 </ItemsGroup>
+
                 <Content>
                     <Title>
                         {currentItem.title} - {currentItem.subTitle}{' '}

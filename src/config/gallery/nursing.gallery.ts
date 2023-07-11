@@ -2,7 +2,6 @@ import Nursing21 from '@/assets/images/nursing/0021.jpg'
 import Nursing22 from '@/assets/images/nursing/0022.jpg'
 import Nursing23 from '@/assets/images/nursing/0023.jpg'
 import Nursing24 from '@/assets/images/nursing/0024.jpg'
-import Nursing25 from '@/assets/images/nursing/0025.jpg'
 import Nursing26 from '@/assets/images/nursing/0026.jpg'
 import Nursing27 from '@/assets/images/nursing/0027.jpg'
 import Nursing28 from '@/assets/images/nursing/0028.jpg'
@@ -20,7 +19,6 @@ export const NURSING_IMAGES = [
     Nursing22,
     Nursing23,
     Nursing24,
-    Nursing25,
     Nursing26,
     Nursing27,
     Nursing28,

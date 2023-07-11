@@ -29,23 +29,7 @@ const HeaderDefault: React.FC = () => {
             child: [
                 {
                     name: 'Educação infantil',
-                    action: () => goTo('/educational-segment/childish'),
-                    child: [
-                        {
-                            name: 'Objetivos Gerais',
-                            action: () =>
-                                goTo(
-                                    '/educational-segment/childish?type=objective'
-                                )
-                        },
-                        {
-                            name: 'Atividades',
-                            action: () =>
-                                goTo(
-                                    '/educational-segment/childish?type=activity'
-                                )
-                        }
-                    ]
+                    action: () => goTo('/educational-segment/childish')
                 },
                 {
                     name: 'Fundamental I',
@@ -109,25 +93,7 @@ const HeaderDefault: React.FC = () => {
                 },
                 {
                     name: 'Ensino médio',
-                    action: () => goTo('/educational-segment/high-school'),
-                    child: [
-                        {
-                            name: 'Objetivos Gerais',
-                            action: () => {
-                                goTo(
-                                    '/educational-segment/high-school?type=objective'
-                                )
-                            }
-                        },
-                        {
-                            name: 'Proposta Pedagógica',
-                            action: () => {
-                                goTo(
-                                    '/educational-segment/high-school?type=pedagogicalProposal'
-                                )
-                            }
-                        }
-                    ]
+                    action: () => goTo('/educational-segment/high-school')
                 }
             ]
         },

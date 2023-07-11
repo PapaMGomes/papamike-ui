@@ -32,11 +32,6 @@ const Unit: React.FC = () => {
                             <CardText>{item.address}</CardText>
 
                             <CardFooter>
-                                {/* <Link onClick={() => openURL(item.link)}>
-                                    Saiba mais
-                                    <FaWhatsapp />
-                                </Link> */}
-
                                 <Link onClick={() => openURL(item.link)}>
                                     Ver rotas
                                     <FaRoute />

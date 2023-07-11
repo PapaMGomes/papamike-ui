@@ -32,24 +32,20 @@ export const FUNDAMENTAL_ONE_IMAGES = [
     Image30
 ]
 
-import IntegralImage1 from '@/assets/images/educational-segments/fundamental-one/integral/0001.jpg'
-import IntegralImage2 from '@/assets/images/educational-segments/fundamental-one/integral/0002.jpg'
-import IntegralImage3 from '@/assets/images/educational-segments/fundamental-one/integral/0003.jpg'
-import IntegralImage4 from '@/assets/images/educational-segments/fundamental-one/integral/0004.jpg'
-import IntegralImage5 from '@/assets/images/educational-segments/fundamental-one/integral/0005.jpg'
-import IntegralImage6 from '@/assets/images/educational-segments/fundamental-one/integral/0006.jpg'
-import IntegralImage7 from '@/assets/images/educational-segments/fundamental-one/integral/0007.jpg'
-import IntegralImage8 from '@/assets/images/educational-segments/fundamental-one/integral/0008.jpg'
-import IntegralImage9 from '@/assets/images/educational-segments/fundamental-one/integral/0009.jpg'
-
 export const FUNDAMENTAL_ONE_INTEGRAL_IMAGES = [
-    IntegralImage1,
-    IntegralImage2,
-    IntegralImage3,
-    IntegralImage4,
-    IntegralImage5,
-    IntegralImage6,
-    IntegralImage7,
-    IntegralImage8,
-    IntegralImage9
+    Image16,
+    Image17,
+    Image18,
+    Image19,
+    Image20,
+    Image21,
+    Image22,
+    Image23,
+    Image24,
+    Image25,
+    Image26,
+    Image27,
+    Image28,
+    Image29,
+    Image30
 ]

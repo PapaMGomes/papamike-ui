@@ -18,7 +18,7 @@ export const UNITS = [
         telephone: '(11) 3683-6114',
         link: `https://goo.gl/maps/hZVU5CpdkwCxAV9m8`,
         address: 'Rua Natanael Tito Salmon, 42 - Centro - Osasco/SP',
-        image: `https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=j8hzJABQw6yHqtWR5d1wRw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=37.479443&pitch=0&thumbfov=100`,
+        image: `https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=6N8XCDYmw7G2Vae5IXMrYw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=40.471355&pitch=0&thumbfov=100`,
         mapURL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.0486247352273!2d-46.780498184517334!3d-23.530753466348894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff05613e5695%3A0xdca38c8b40907a7b!2sR.%20Natanael%20Tito%20Salmon%2C%2042%20-%20Centro%2C%20Osasco%20-%20SP%2C%2006016-075!5e0!3m2!1spt-BR!2sbr!4v1665524728203!5m2!1spt-BR!2sbr`
     },
     {

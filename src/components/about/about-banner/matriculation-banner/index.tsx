@@ -22,7 +22,7 @@ const MatriculationBanner: React.FC = () => {
     return (
         <Card>
             <TitleContainer>
-                <Title>MATRÍCULAS ABERTAS 2023</Title>
+                <Title>MATRÍCULAS ABERTAS 2024</Title>
             </TitleContainer>
 
             <Article>

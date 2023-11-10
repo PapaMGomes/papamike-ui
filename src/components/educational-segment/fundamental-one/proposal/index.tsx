@@ -20,13 +20,13 @@ const FundamentalOneProposal: React.FC = () => {
                     cidadania a ser um sujeito empreendedor, ético e solidário.
                 </Text>
 
-                <Text>
+                {/* <Text>
                     Contamos com a parceira Sistema Maxi de Ensino, com mais de
                     30 anos de experiência, referência em educação no Brasil.
                     Com uma proposta inovadora e exclusiva baseada na Pedagogia
                     Afetiva, o Sistema Maxi de Ensino privilegia uma educação de
                     qualidade que valoriza as interações humanas.
-                </Text>
+                </Text> */}
             </Container>
         </ContainerHeaven>
     )

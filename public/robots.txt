@@ -1,0 +1,8 @@
+# Block all crawlers for /accounts
+User-agent: *
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+Sitemap: https://papamike.com.br/sitemap.xml

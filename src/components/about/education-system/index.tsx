@@ -15,13 +15,13 @@ import {
 
 const EducationSystem: React.FC = () => {
     const items = [
-        {
-            title: 'Sistema Maxi',
-            animation: 'fadeInUp',
-            link: `https://sistemamaxi.com.br/`,
-            subtitle: 'Ensino Infantil ao Fundamental II',
-            description: `Com mais de 30 anos de experiência, referência em educação no Brasil. Com uma proposta inovadora e exclusiva baseada na Pedagogia Afetiva, o Sistema Maxi de Ensino privilegia uma educação de qualidade que valoriza as interações humanas.`
-        },
+        // {
+        //     title: 'Sistema Maxi',
+        //     animation: 'fadeInUp',
+        //     link: `https://sistemamaxi.com.br/`,
+        //     subtitle: 'Ensino Infantil ao Fundamental II',
+        //     description: `Com mais de 30 anos de experiência, referência em educação no Brasil. Com uma proposta inovadora e exclusiva baseada na Pedagogia Afetiva, o Sistema Maxi de Ensino privilegia uma educação de qualidade que valoriza as interações humanas.`
+        // },
         {
             title: 'Sistema Bernoulli',
             subtitle: 'Ensino Médio',
@@ -35,9 +35,7 @@ const EducationSystem: React.FC = () => {
         <WraperContainer>
             <Container>
                 <ScrollAnimation animation="backInLeft">
-                    <Title>
-                        Contamos com a parceira de dois sistemas de ensino
-                    </Title>
+                    <Title>Sistemas de ensino</Title>
                 </ScrollAnimation>
 
                 <Content>

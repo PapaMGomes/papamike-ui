@@ -20,13 +20,13 @@ const FundamentalTwoProposal: React.FC = () => {
                 sociais que colocam nossos alunos à frente das oportunidades que
                 a sociedade contemporânea oferece.
             </Text>
-            <Text>
+            {/* <Text>
                 Contamos com a parceira Sistema Maxi de Ensino, com mais de 30
                 anos de experiência, referência em educação no Brasil. Com uma
                 proposta inovadora e exclusiva baseada na Pedagogia Afetiva, o
                 Sistema Maxi de Ensino privilegia uma educação de qualidade que
                 valoriza as interações humanas.
-            </Text>
+            </Text> */}
         </Container>
     )
 }

@@ -83,8 +83,10 @@ const OurStory: React.FC = () => {
             title: '2013',
             content: (
                 <Text>
-                    Iniciamos a Pós Graduação, em parceria com a Universidade do
-                    Norte do Paraná- Unopar.
+                    Abrimos a segunda unidade do Papa Mike Kids, localizada na
+                    região Jardim Mutinga, em Osasco. Iniciamos também o nosso
+                    Polo de Faculdade, com a Anhanguera EAD - Osasco. Oferecendo
+                    cursos de Graduação e Pós-Graduação.
                 </Text>
             )
         },
@@ -114,13 +116,15 @@ const OurStory: React.FC = () => {
             )
         },
         {
-            title: '2021',
+            title: '2023',
             content: (
                 <Text>
                     Durante essa linha cronológica o Colégio Papa Mike tem se
-                    mantido fiel à sua filosofia, que é a de manter cursos de
-                    qualidade, com preços competitivos e um olhar especial ao
-                    atendimento para uma educação voltada à vida e à
+                    mantido fiel à sua filosofia, com uma visão completa e
+                    desenvolver o aprendizado e o caráter do aluno, por meio de
+                    conteúdos que contemplam a formação de um cidadão
+                    empreendedor, ético, solidário e preparado para a vida
+                    pessoal e profissional. Com uma educação voltada à vida e à
                     empregabilidade.
                 </Text>
             )

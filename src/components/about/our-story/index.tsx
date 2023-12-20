@@ -90,15 +90,15 @@ const OurStory: React.FC = () => {
                 </Text>
             )
         },
-        {
-            title: '2018',
-            content: (
-                <Text>
-                    Abrimos a segunda unidade do Papa Mike Kids, localizada na
-                    região Jd. Mutinga, em Osasco.
-                </Text>
-            )
-        },
+        // {
+        //     title: '2018',
+        //     content: (
+        //         <Text>
+        //             Abrimos a segunda unidade do Papa Mike Kids, localizada na
+        //             região Jd. Mutinga, em Osasco.
+        //         </Text>
+        //     )
+        // },
         {
             title: '2020',
             content: (

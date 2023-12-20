@@ -9,7 +9,7 @@ export const WraperContainer = styled.section`
 export const Container = styled(AppContainer)``
 
 export const Title = styled.p`
-    ${tw`text-lg font-bold mb-2`}
+    ${tw`text-lg text-center font-bold mb-2`}
     color: ${({ theme }) => theme.colors.primary};
 `
 

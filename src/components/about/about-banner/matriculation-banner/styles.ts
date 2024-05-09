@@ -1,15 +1,13 @@
 import Blob from '@/assets/images/elements/simple-blob.png'
-import StudentImage from '@/assets/images/student.png'
 import { AppButton } from '@/styles/css/ts/components'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Card = styled.article`
-    ${tw`p-10 rounded-3xl h-64 shadow-md relative`}
+    ${tw`p-8 pt-12 rounded-3xl h-64 shadow-md relative`}
     ${tw`md:flex-col flex justify-center md:h-[42vh] md:shadow-[inset 0 0 0 2000px #00000057}]`}
 
     background: ${({ theme }) => `
-        url(${StudentImage}) right top  no-repeat,
         url(${Blob}) left center no-repeat,
 
         linear-gradient(
@@ -51,7 +49,7 @@ export const Text = styled.p`
 `
 
 export const Article = styled.article`
-    ${tw`pl-8 flex flex-col justify-center items-center relative md:pl-0`}
+    ${tw`h-full flex flex-col justify-between items-center relative`}
 `
 
 export const Button = styled(AppButton)`

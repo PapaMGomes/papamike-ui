@@ -21,11 +21,9 @@ const MatriculationBanner: React.FC = () => {
 
     return (
         <Card>
-            <TitleContainer>
-                <Title>MATRÍCULAS ABERTAS 2024</Title>
-            </TitleContainer>
-
             <Article>
+                <Title>MATRÍCULAS ABERTAS 2024</Title>
+
                 <TextContainer>
                     <Text>Venha conhecer nosso Colégio!</Text>
                     <Text>Apresentação Pedagógica Institucional</Text>

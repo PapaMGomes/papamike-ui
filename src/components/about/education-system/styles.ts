@@ -14,7 +14,7 @@ export const Title = styled.p`
 `
 
 export const Content = styled.div`
-    ${tw`mt-6 flex justify-center sm:flex-col`}
+    ${tw`mt-6 flex gap-4 justify-center sm:flex-col`}
 
     > div {
         ${tw`w-[calc(50% - 12px)] sm:w-full sm:mb-4`}

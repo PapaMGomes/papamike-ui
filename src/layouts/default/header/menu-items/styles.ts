@@ -33,7 +33,7 @@ export const Item = styled.li`
 `
 
 export const ItemTitle = styled.span`
-    ${tw`flex items-center`}
+    ${tw`flex items-center text-[0.9rem] relative top-0.5`}
     color: ${({ theme }) => theme.colors.bgSecondary};
 
     > svg {

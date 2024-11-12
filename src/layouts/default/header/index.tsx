@@ -98,27 +98,31 @@ const HeaderDefault: React.FC = () => {
             ]
         },
         {
-            name: 'Cursos',
-            child: [
-                {
-                    name: 'Técnico em Enfermagem',
-                    action: () => goTo('/course/nursing-technician')
-                },
-                {
-                    name: 'Cursos Livres',
-                    child: [
-                        {
-                            name: 'Enfermagem',
-                            action: () => goTo('/course/free-course/nursing')
-                        },
-                        {
-                            name: 'Estética',
-                            action: () => goTo('/course/free-course/aesthetics')
-                        }
-                    ]
-                }
-            ]
+            name: 'Técnico em Enfermagem',
+            action: () => goTo('/course/nursing-technician')
         },
+        // {
+        //     name: 'Cursos',
+        //     child: [
+        //         {
+        //             name: 'Técnico em Enfermagem',
+        //             action: () => goTo('/course/nursing-technician')
+        //         },
+        //         {
+        //             name: 'Cursos Livres',
+        //             child: [
+        //                 {
+        //                     name: 'Enfermagem',
+        //                     action: () => goTo('/course/free-course/nursing')
+        //                 },
+        //                 {
+        //                     name: 'Estética',
+        //                     action: () => goTo('/course/free-course/aesthetics')
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // },
         {
             name: 'Anhanguera',
             action: () => goTo('/anhanguera'),

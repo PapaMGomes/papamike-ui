@@ -15,19 +15,19 @@ import {
 
 const EducationSystem: React.FC = () => {
     const items = [
-        // {
-        //     title: 'Sistema Maxi',
-        //     animation: 'fadeInUp',
-        //     link: `https://sistemamaxi.com.br/`,
-        //     subtitle: 'Ensino Infantil ao Fundamental II',
-        //     description: `Com mais de 30 anos de experiência, referência em educação no Brasil. Com uma proposta inovadora e exclusiva baseada na Pedagogia Afetiva, o Sistema Maxi de Ensino privilegia uma educação de qualidade que valoriza as interações humanas.`
-        // },
         {
             title: 'Sistema Bernoulli',
-            subtitle: 'Ensino Médio',
+            subtitle: 'Kids ao Fundamental I',
             animation: 'fadeInUp',
             link: `https://www.bernoulli.com.br/sistema-de-ensino/sobre-nos/`,
-            description: `Com uma proposta inovadora e exclusiva, o Bernoulli é hoje um dos principais grupos educacionais do Brasil. Com livros atualizados anualmente, através de uma abordagem fluida, com temas relevantes que ajudam o estudante a desenvolver o pensamento crítico, além de uma postura cidadã e consciente.`
+            description: `Com uma proposta inovadora e exclusiva, o Bernoulli é um dos principais grupos educacionais do Brasil. Seus livros, atualizados anualmente, proporcionam uma abordagem fluida e abordam temas relevantes que ajudam os estudantes a desenvolver o pensamento crítico, além de fomentar uma postura cidadã e consciente.`
+        },
+        {
+            title: 'Sistema Amplia',
+            animation: 'fadeInUp',
+            link: `https://somoseducacao.com.br/sistemaAmplia.php`,
+            subtitle: 'Fundamental II ao Ensino Médio',
+            description: `Com uma abordagem moderna e centrada no aluno, o Amplia é uma solução educacional inovadora desenvolvida pelo grupo Somos Educação. Com conteúdos atualizados e uma metodologia que integra tecnologia e personalização, o Amplia oferece uma experiência de aprendizado dinâmica, estimulando o desenvolvimento de habilidades críticas e a autonomia dos estudantes, ao mesmo tempo que apoia professores com ferramentas e recursos pedagógicos de excelência.`
         }
     ]
 

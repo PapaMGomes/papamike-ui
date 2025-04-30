@@ -18,8 +18,8 @@ const OurStory: React.FC = () => {
             title: '1998',
             content: (
                 <Text>
-                    Acompanhando o progresso do município de Osasco, abriu vagas
-                    para a o curso de Educação de Jovens e Adultos.
+                    Acompanhando o crescimento e progresso de Osasco, passamos a
+                    oferecer o curso de Educação de Jovens e Adultos (EJA).
                 </Text>
             )
         },
@@ -27,8 +27,8 @@ const OurStory: React.FC = () => {
             title: '2000',
             content: (
                 <Text>
-                    Foram iniciadas as atividades do nosso primeiro curso
-                    técnico, com o curso de Enfermagem.
+                    Lançamento do nosso primeiro curso técnico: Técnico em
+                    Enfermagem.
                 </Text>
             )
         },
@@ -36,8 +36,8 @@ const OurStory: React.FC = () => {
             title: '2001',
             content: (
                 <Text>
-                    As primeiras turmas dos cursos técnicos em Radiologia,
-                    Contabilidade e Administração foram formadas.
+                    Formamos as primeiras turmas dos cursos técnicos em
+                    Radiologia, Contabilidade e Administração.
                 </Text>
             )
         },
@@ -45,10 +45,9 @@ const OurStory: React.FC = () => {
             title: '2002',
             content: (
                 <Text>
-                    A identidade visual e a razão social do Colégio foram
-                    modificadas, antes intituladas Papa Mike Cursos
-                    Preparatórios, pois já não trabalhávamos somente com cursos
-                    preparatórios, mas sim com cursos em diversos segmentos.
+                    Mudamos nossa identidade visual e razão social, deixando de
+                    ser "Papa Mike Cursos Preparatórios" para refletir nossa
+                    expansão para diversas áreas do ensino.
                 </Text>
             )
         },
@@ -56,8 +55,17 @@ const OurStory: React.FC = () => {
             title: '2003',
             content: (
                 <Text>
-                    A pedido de pais e alunos, iniciamos o ensino Fundamental e
-                    o Médio.
+                    Atendendo aos pedidos de pais e alunos, iniciamos o Ensino
+                    Fundamental e o Ensino Médio.
+                </Text>
+            )
+        },
+        {
+            title: '2005',
+            content: (
+                <Text>
+                    Com o passar dos anos, fortalecemos nossa tradição e
+                    formamos milhares de alunos em Osasco.
                 </Text>
             )
         },
@@ -65,8 +73,7 @@ const OurStory: React.FC = () => {
             title: '2008',
             content: (
                 <Text>
-                    Foi montada a primeira turma do curso técnico em Segurança
-                    do Trabalho.
+                    Implantamos o curso técnico em Segurança do Trabalho.
                 </Text>
             )
         },
@@ -74,8 +81,8 @@ const OurStory: React.FC = () => {
             title: '2009',
             content: (
                 <Text>
-                    Inauguramos e inovamos com a primeira unidade do Papa Mike
-                    Kids, localizado no Centro de Osasco.
+                    Inovamos e inauguramos a primeira unidade do Papa Mike Kids,
+                    no Centro de Osasco, focada na Educação Infantil.
                 </Text>
             )
         },
@@ -83,49 +90,44 @@ const OurStory: React.FC = () => {
             title: '2013',
             content: (
                 <Text>
-                    Abrimos a segunda unidade do Papa Mike Kids, localizada na
-                    região Jardim Mutinga, em Osasco. Iniciamos também o nosso
-                    Polo de Faculdade, com a Anhanguera EAD - Osasco. Oferecendo
-                    cursos de Graduação e Pós-Graduação.
+                    Expandimos com a segunda unidade do Papa Mike Kids, na
+                    região do Jardim Mutinga, em Osasco. Também iniciamos nosso
+                    polo de ensino superior, em parceria com a Anhanguera EAD,
+                    oferecendo cursos de Graduação e Pós-graduação.
                 </Text>
             )
         },
-        // {
-        //     title: '2018',
-        //     content: (
-        //         <Text>
-        //             Abrimos a segunda unidade do Papa Mike Kids, localizada na
-        //             região Jd. Mutinga, em Osasco.
-        //         </Text>
-        //     )
-        // },
+        {
+            title: '2019',
+            content: (
+                <Text>
+                    Seguimos firmes na missão de educar e formar vencedores,
+                    contribuindo significativamente para o futuro de nossos
+                    jovens.
+                </Text>
+            )
+        },
         {
             title: '2020',
             content: (
                 <Text>
-                    Em meados de Março, devido a pandemia causada pela Covid-19,
-                    nossas unidades precisaram ser fechadas, comprometendo
-                    assim, o ensino presencial de nossos alunos. Rapidamente,
-                    por meio do ensino remoto, trouxemos a solução para
-                    contornar esse problema e acima de tudo conseguimos manter
-                    nossos padrões de qualidade e excelência nos ensinos. Em um
-                    momento tão delicado para a educação, a equipe Papa Mike
-                    continua se esforçando cada vez mais para contribuir na
-                    formação de nossos alunos!
+                    Com a chegada da pandemia da Covid-19, adaptamos rapidamente
+                    nosso ensino para o modelo remoto, garantindo a continuidade
+                    da aprendizagem com qualidade e comprometimento, mesmo em
+                    tempos desafiadores.
                 </Text>
             )
         },
         {
-            title: '2023',
+            title: '2025',
             content: (
                 <Text>
-                    Durante essa linha cronológica o Colégio Papa Mike tem se
-                    mantido fiel à sua filosofia, com uma visão completa e
-                    desenvolver o aprendizado e o caráter do aluno, por meio de
-                    conteúdos que contemplam a formação de um cidadão
-                    empreendedor, ético, solidário e preparado para a vida
-                    pessoal e profissional. Com uma educação voltada à vida e à
-                    empregabilidade.
+                    Sempre inovando e mantendo-se fiel à sua filosofia, o
+                    Colégio Papa Mike continua promovendo uma educação voltada
+                    para a vida e a empregabilidade. Nosso foco é desenvolver o
+                    aprendizado e o caráter dos alunos, formando cidadãos
+                    empreendedores, éticos, solidários e preparados para os
+                    desafios pessoais e profissionais do mundo moderno.
                 </Text>
             )
         }
@@ -134,7 +136,7 @@ const OurStory: React.FC = () => {
     return (
         <WraperContainer>
             <Container>
-                <Title>Nossa Historia</Title>
+                <Title>Nossa História</Title>
                 <Timeline items={items} />
             </Container>
         </WraperContainer>

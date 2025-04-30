@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { darken } from 'polished'
 import tw from 'twin.macro'
 
-export const Container = styled.section.attrs(fadeIn.right)`
+export const Container = styled.section.attrs(fadeIn.default)`
     ${tw`pl-[4.5rem] md:hidden w-full`}
     height: ${({ theme }) => theme.spacing.menuHeight};
     background: ${({ theme }) =>

@@ -21,7 +21,7 @@ export const ImageContainer = styled.figure`
     ${tw`mb-3 flex flex-col items-center`}
 `
 
-export const Image = styled.img.attrs(fadeIn.left)`
+export const Image = styled.img.attrs(fadeIn.default)`
     ${tw`sm:w-24 sm:h-14 cursor-pointer`}
 `
 
@@ -34,7 +34,7 @@ export const Content = styled.article.attrs(fadeIn.down)`
     ${tw`flex items-center md:hidden`}
 `
 
-export const Button = styled(AppButton).attrs(fadeIn.right)`
+export const Button = styled(AppButton).attrs(fadeIn.default)`
     ${tw`pl-4 py-3 flex ml-3 items-center justify-between uppercase transition-all duration-500 md:hidden`}
 
     > svg {

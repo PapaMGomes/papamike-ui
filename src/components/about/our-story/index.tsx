@@ -1,6 +1,6 @@
 import React from 'react'
-import Timeline from '@/components/common/timeline'
 import { WraperContainer, Container, Title, Text } from './styles'
+import VerticalTimeline from '@/components/common/vertical-timeline'
 
 const OurStory: React.FC = () => {
     const items = [
@@ -137,7 +137,7 @@ const OurStory: React.FC = () => {
         <WraperContainer>
             <Container>
                 <Title>Nossa História</Title>
-                <Timeline items={items} />
+                <VerticalTimeline items={items} />
             </Container>
         </WraperContainer>
     )

@@ -4,15 +4,19 @@ interface ScrollAnimationProps {
     children: React.ReactNode
     animation?: string
     id?: string
+    className?: string
 }
 
 const ScrollAnimation: React.FC<ScrollAnimationProps> = props => {
-    const { children, animation, id } = props
+    const { children, animation, id, className } = props
     const elementContainer = useRef(null)
 
     useEffect(() => {
         checkVisible()
         window.addEventListener('scroll', () => checkVisible(), false)
+        return () => {
+            window.removeEventListener('scroll', () => checkVisible())
+        }
     }, [])
 
     const checkVisible = () => {
@@ -32,7 +36,11 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = props => {
     }
 
     return (
-        <div className="animate__animated" id={id} ref={elementContainer}>
+        <div
+            className={`animate__animated ${className || ''}`}
+            id={id}
+            ref={elementContainer}
+        >
             {children}
         </div>
     )

@@ -122,12 +122,10 @@ const OurStory: React.FC = () => {
             title: '2025',
             content: (
                 <Text>
-                    Sempre inovando e mantendo-se fiel à sua filosofia, o
-                    Colégio Papa Mike continua promovendo uma educação voltada
-                    para a vida e a empregabilidade. Nosso foco é desenvolver o
-                    aprendizado e o caráter dos alunos, formando cidadãos
-                    empreendedores, éticos, solidários e preparados para os
-                    desafios pessoais e profissionais do mundo moderno.
+                    O Colégio Papa Mike promove uma educação inovadora e voltada
+                    para a vida e a empregabilidade, desenvolvendo o
+                    aprendizado, o caráter e a formação de cidadãos éticos,
+                    solidários e preparados para os desafios do mundo moderno.
                 </Text>
             )
         }

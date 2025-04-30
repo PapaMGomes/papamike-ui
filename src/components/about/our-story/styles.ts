@@ -16,5 +16,5 @@ export const Title = styled.p`
 
 export const Text = styled.p.attrs(fadeIn.left)`
     ${tw`min-h-[100px] text-center text-base pb-6`}
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
 `

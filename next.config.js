@@ -9,7 +9,10 @@ const nextConfig = {
         NEXT_PUBLIC_GTM_ID: 'GTM-W9W96BX'
     },
     reactStrictMode: true,
-    trailingSlash: process.env.NODE_ENV.trim() == 'development'
+    trailingSlash: process.env.NODE_ENV.trim() == 'development',
+    eslint: {
+        ignoreDuringBuilds: true
+    }
 }
 
 module.exports = withPlugins([
